@@ -38,8 +38,8 @@ export default function ConsumerSection() {
         </div>
 
         {/* Additional Features */}
-        <div className=" rounded-3xl p-8 md:p-12 ">
-          <h3 className="text-2xl text-center md:text-[28px] font-semibold text-[#585757] mb-8">
+        <div className=" rounded-3xl md:p-8 md:p-12 ">
+          <h3 className="text-2xl md:text-center md:text-[28px] font-semibold text-[#585757] mb-8">
             There's more for consumers
           </h3>
 

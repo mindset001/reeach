@@ -67,7 +67,7 @@ export default function Navbar() {
       {isMenuOpen && (
         <div className="md:hidden fixed inset-0 bg-white z-[100] overflow-y-auto">
           {/* Header with Logo and Close Button */}
-          <div className="flex items-center justify-between px-6 py-4 border-b border-gray-200">
+          <div className="flex items-center justify-between px-6 py-4 ">
             <Link href="/" className="flex items-center gap-2" onClick={() => setIsMenuOpen(false)}>
               <Image
                 src="/images/logo.png"
@@ -103,14 +103,14 @@ export default function Navbar() {
           </div>
 
           {/* Bottom Buttons */}
-          <div className="fixed bottom-0 left-0 right-0 px-6 py-8 bg-white border-t border-gray-200">
+          <div className="fixed bottom-0 left-0 right-0 px-6 py-8 bg-white ">
             <div className="flex gap-4">
-              <Button variant="primary" size="md" className="flex-1" onClick={() => setIsMenuOpen(false)}>
-                Join waitlist
-              </Button>
-              <Button variant="secondary" size="md" className="flex-1" onClick={() => setIsMenuOpen(false)}>
-                Learn more
-              </Button>
+              <button className="bg-[#E64D0B] rounded-[24px] flex-1" onClick={() => setIsMenuOpen(false)}>
+                <p className="font-SemiBold text-[16px]">Join waitlist</p>
+              </button>
+              <button className="flex-1" onClick={() => setIsMenuOpen(false)}>
+                <p className="font-SemiBold text-[#1C1C1C] text-[16px]">Learn More</p>
+              </button>
             </div>
           </div>
         </div>
