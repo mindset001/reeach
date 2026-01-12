@@ -4,7 +4,7 @@ import { useState } from "react";
 import { USER_TYPES } from "@/constants/userTypes";
 
 export default function UseCasesSection() {
-  const [activeTab, setActiveTab] = useState(USER_TYPES[0].id);
+  const [activeTab, setActiveTab] = useState<string>(USER_TYPES[0].id);
 
   const activeUserType = USER_TYPES.find((type) => type.id === activeTab);
 
