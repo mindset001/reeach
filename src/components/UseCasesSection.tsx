@@ -22,7 +22,7 @@ export default function UseCasesSection() {
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-3xl md:text-[16px] font-regular text-[#1C1C1C] mb-4">
+          <h2 className="text-[16px] md:text-[16px] font-regular text-[#585757] md:text-[#1C1C1C] md:mb-4">
             Reeach is built to serve every player in the downstream supply
             chain.
           </h2>
@@ -32,14 +32,14 @@ export default function UseCasesSection() {
         </div>
 
         {/* Tabs - Sticky */}
-   <div className="flex justify-center">
-         <div className="sticky top-0 z-40 bg-white w-[60%] py-2 border border-[#F1D0C2] rounded-[88px] mb-12">
-          <div className="flex flex-wrap justify-center gap-3">
+   <div className="flex justify-center overflow-x-auto">
+         <div className="sticky top-0 z-40 bg-white py-2 border border-[#F1D0C2] rounded-[88px] mb-12">
+          <div className="flex justify-center gap-3 whitespace-nowrap px-2">
             {USER_TYPES.map((type) => (
               <button
                 key={type.id}
                 onClick={() => handleTabClick(type.id)}
-                className={`px-6 py-3 rounded-full text-[14px] font-medium transition-all duration-200 ${
+                className={`px-6 py-3 rounded-full text-[14px] font-medium transition-all duration-200 flex-shrink-0 ${
                   activeTab === type.id
                     ? "bg-[#FFF7F3] text-[#1C1C1C]"
                     : "text-[#585757]"

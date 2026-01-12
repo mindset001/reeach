@@ -22,9 +22,9 @@ export default function ProblemSection() {
           {/* Right - Content */}
           <div className="space-y-6">
             <div className="">
-              <h2 className="text-3xl md:text-[28px]  lg:text-[28px] font-semibold text-[#1C1C1C] leading-tight">
-                Every day, billions <br /> of transactions fail before <br />they start.
-                Reeach is taking <br /> responsibility.
+              <h2 className="text-[24px] md:text-[28px]  lg:text-[28px] font-semibold text-[#585757] md:text-[#1C1C1C] leading-tight">
+                Every day, billions <br className="hidden md:block"/> of transactions fail before <br className="hidden md:block"/>they start.
+                Reeach is taking <br className="hidden md:block"/> responsibility.
               </h2>
             </div>
 

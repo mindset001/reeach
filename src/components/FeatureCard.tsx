@@ -25,13 +25,13 @@ export default function FeatureCard({
       }`}
     >
       {/* Text Content */}
-      <div className={`space-y-8 ${isImageRight ? "" : "md:col-start-2 md:pl-20"}`}>
-        <div className="w-[75%]">
+      <div className={`space-y-8 ${isImageRight ? "order-2 md:order-1" : "order-2 md:col-start-2 md:pl-20"}`}>
+        <div className="md:w-[75%]">
           <h3 className="text-2xl md:text-[28px] font-semibold text-[#000000]">
             {title}
           </h3>
         </div>
-        <div className="w-[60%]">
+        <div className="w-[90%] md:w-[60%]">
           <p className="text-[#5F6368] leading-relaxed text-[16px] font-regular">{description}</p>
         </div>
         <div className="flex gap-4">
@@ -45,7 +45,7 @@ export default function FeatureCard({
       </div>
 
       {/* Image */}
-      <div className={`${isImageRight ? "" : "md:col-start-1 md:row-start-1"}`}>
+      <div className={`${isImageRight ? "order-1 md:order-2" : "order-1 md:col-start-1 md:row-start-1"}`}>
         <div className="rounded-2xl overflow-hidden shadow-lg">
           <Image
             src={image}

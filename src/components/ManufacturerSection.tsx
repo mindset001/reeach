@@ -15,7 +15,7 @@ export default function ManufacturerSection() {
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-[28px] md:text-[28px]font-bold text-gray-900 mb-4">
             Reeach for Manufacturers
           </h2>
           <p className="text-lg text-gray-600">
@@ -38,13 +38,13 @@ export default function ManufacturerSection() {
         </div>
 
         {/* Additional Features */}
-        <div className=" rounded-3xl p-8 md:p-12">
-          <h3 className="text-2xl text-center md:text-[28px] font-semibold text-[#585757] mb-8">
+        <div className=" rounded-3xl md:p-8 md:p-12">
+          <h3 className="text-2xl md:text-center md:text-[28px] font-semibold text-[#585757] mb-8">
             There's more for manufacturers
           </h3>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-4">
+            <div className="space-y-4 order-2 md:order-1">
               {ADDITIONAL_MANUFACTURER_FEATURES.map((feature, index) => (
                 <button
                   key={index}
@@ -59,13 +59,13 @@ export default function ManufacturerSection() {
                     {feature.title}
                   </h4>
                   {activeFeature === index && (
-                    <p className="text-[#5F6368] text-[16px] font-[400] w-[50%]">{feature.description}</p>
+                    <p className="text-[#5F6368] text-[16px] font-[400] md:w-[50%]">{feature.description}</p>
                   )}
                 </button>
               ))}
             </div>
 
-            <div className="bg-[#F6F3F3] flex items-center justify-center rounded-[16px] min-h-[300px] p-8">
+            <div className="bg-[#F6F3F3] flex items-center justify-center rounded-[16px] min-h-[300px] p-8 order-1 md:order-2">
               <div className="text-center">
                 <h4 className="font-bold text-gray-900 mb-4 text-xl">
                   {ADDITIONAL_MANUFACTURER_FEATURES[activeFeature].title}

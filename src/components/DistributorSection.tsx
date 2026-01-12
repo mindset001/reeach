@@ -43,7 +43,7 @@ export default function DistributorSection() {
           </h3>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-4">
+            <div className="space-y-4 order-2 md:order-1">
               {ADDITIONAL_DISTRIBUTOR_FEATURES.map((feature, index) => (
                 <button
                   key={index}
@@ -58,13 +58,13 @@ export default function DistributorSection() {
                     {feature.title}
                   </h4>
                   {activeFeature === index && (
-                    <p className="text-[#5F6368] text-[16px] font-[400] w-[50%]">{feature.description}</p>
+                    <p className="text-[#5F6368] text-[16px] font-[400] md:w-[50%]">{feature.description}</p>
                   )}
                 </button>
               ))}
             </div>
 
-            <div className="bg-[#F6F3F3] flex items-center justify-center rounded-[16px] min-h-[300px] p-8">
+            <div className="bg-[#F6F3F3] flex items-center justify-center rounded-[16px] min-h-[300px] p-8 order-1 md:order-2">
               <div className="text-center">
                 <h4 className="font-bold text-gray-900 mb-4 text-xl">
                   {ADDITIONAL_DISTRIBUTOR_FEATURES[activeFeature].title}
