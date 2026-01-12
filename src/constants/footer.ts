@@ -39,7 +39,7 @@ export const LEGAL_LINKS = [
 ];
 
 export const ENQUIRIES = [
-  { label: "james.nnamikwo@reeach.co", href: "mailto:james.nnamikwo@reeach.co" },
+  { label: "james.nwannkwo@reeach.co", href: "mailto:james.nwannkwo@reeach.co" },
   { label: "operations@reeach.co", href: "mailto:operations@reeach.co" },
 ];
 

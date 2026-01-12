@@ -77,7 +77,7 @@ export default function Footer() {
               </p>
               <Link
                 href={column.notifyLink}
-                className="inline-flex items-center gap-2 text-[#E64D0B] font-regular text-[16px] hover:text-orange-700 transition-colors"
+                className="inline-flex items-center gap-2 text-[#000000] font-light text-[16px] hover:text-orange-700 transition-colors"
               >
                 Get notified at launch
                 <svg
@@ -99,7 +99,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Footer Sections */}
-        <div className="grid md:grid-cols-3 gap-8 pt-8 border-t border-gray-200 mb-8">
+        <div className="grid md:grid-cols-4 gap-8 pt-8 border-gray-200 mb-8">
           {/* Company Resources */}
           <div>
             <h4 className="font-bold text-gray-900 mb-4">Company Resources</h4>

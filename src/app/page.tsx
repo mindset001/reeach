@@ -6,6 +6,7 @@ import ManufacturerSection from "@/components/ManufacturerSection";
 import DistributorSection from "@/components/DistributorSection";
 import RetailerSection from "@/components/RetailerSection";
 import ConsumerSection from "@/components/ConsumerSection";
+import NotifySection from "@/components/NotifySection";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
       <DistributorSection />
       <RetailerSection />
       <ConsumerSection />
+      <NotifySection />
       <Footer />
     </div>
   );
