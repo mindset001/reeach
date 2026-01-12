@@ -13,7 +13,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div
         className="absolute inset-0 z-0"
@@ -30,7 +30,7 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-6 py-80 relative z-10">
+      <div className="container mx-auto px-6 py-40 relative z-10">
         <div className="grid md:grid-cols-2 gap-16 items-start">
           {/* Left Content */}
           <div className="space-y-6 pt-12">
