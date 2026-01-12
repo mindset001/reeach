@@ -1,0 +1,61 @@
+import Image from "next/image";
+
+interface FeatureCardProps {
+  title: string;
+  description: string;
+  image: string;
+  imagePosition: "left" | "right";
+  ctaText?: string;
+  onCtaClick?: () => void;
+}
+
+export default function FeatureCard({
+  title,
+  description,
+  image,
+  imagePosition,
+  ctaText = "Join waitlist",
+}: FeatureCardProps) {
+  const isImageRight = imagePosition === "right";
+
+  return (
+    <div
+      className={`grid md:grid-cols-2 gap-8 items-center ${
+        isImageRight ? "" : "md:grid-flow-dense"
+      }`}
+    >
+      {/* Text Content */}
+      <div className={`space-y-8 ${isImageRight ? "" : "md:col-start-2 md:pl-20"}`}>
+        <div className="w-[75%]">
+          <h3 className="text-2xl md:text-[28px] font-semibold text-[#000000]">
+            {title}
+          </h3>
+        </div>
+        <div className="w-[60%]">
+          <p className="text-[#5F6368] leading-relaxed text-[16px] font-regular">{description}</p>
+        </div>
+        <div className="flex gap-4">
+          <button className="text-[#E64D0B] font-regular text-[16px] hover:text-orange-700 transition-colors">
+            {ctaText}
+          </button>
+          <button className="text-[#E64D0B] font-regular text-[16px] hover:text-gray-700 transition-colors">
+            See more
+          </button>
+        </div>
+      </div>
+
+      {/* Image */}
+      <div className={`${isImageRight ? "" : "md:col-start-1 md:row-start-1"}`}>
+        <div className="rounded-2xl overflow-hidden shadow-lg">
+          <Image
+            src={image}
+            alt={title}
+            width={600}
+            height={400}
+            className="w-full h-auto object-cover"
+          />
+        </div>
+      </div>
+    </div>
+  );
+}
