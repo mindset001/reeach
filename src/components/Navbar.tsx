@@ -2,28 +2,42 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Button from "./Button";
 import { NAV_LINKS } from "@/constants/navigation";
 
 interface NavbarProps {
   variant?: "default" | "dark";
+  onJoinWaitlist?: () => void;
 }
 
-export default function Navbar({ variant = "default" }: NavbarProps) {
+export default function Navbar({ variant = "default", onJoinWaitlist }: NavbarProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Check if scrolled past hero section (approximate height)
+      setIsScrolled(window.scrollY > window.innerHeight * 0.8);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const isDark = variant === "dark";
-  const logoSrc = isDark ? "/images/black-logo.png" : "/images/white-logo.png";
-  const textColor = isDark ? "text-[#5F6368]" : "text-white";
-  const hoverColor = isDark ? "hover:text-[#1C1C1C]" : "hover:text-white/80";
-  const hamburgerBg = isDark ? "bg-gray-100" : "bg-[#EFEFEF1A]";
-  const hamburgerHoverBg = isDark ? "hover:bg-gray-200" : "hover:bg-[#5A6A6F]";
-  const hamburgerIconColor = isDark ? "bg-gray-800" : "bg-white";
+  const logoSrc = (isDark && !isScrolled) ? "/images/black-logo.png" : "/images/white-logo.png";
+  const textColor = (isDark && !isScrolled) ? "text-[#5F6368]" : "text-white";
+  const hoverColor = (isDark && !isScrolled) ? "hover:text-[#1C1C1C]" : "hover:text-white/80";
+  const hamburgerBg = (isDark && !isScrolled) ? "bg-gray-100" : "bg-[#EFEFEF1A]";
+  const hamburgerHoverBg = (isDark && !isScrolled) ? "hover:bg-gray-200" : "hover:bg-[#5A6A6F]";
+  const hamburgerIconColor = (isDark && !isScrolled) ? "bg-gray-800" : "bg-white";
 
   return (
     <>
-      <nav className="fixed top-0 h-[66px] left-0 right-0 z-50 bg-transparent backdrop-blur-[4px]">
+      <nav className={`fixed top-0 h-[66px] left-0 right-0 z-50 transition-colors duration-300 ${
+        isScrolled ? "bg-black" : "bg-transparent backdrop-blur-[4px]"
+      }`}>
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
            <div className="flex items-center gap-8">
@@ -52,11 +66,19 @@ export default function Navbar({ variant = "default" }: NavbarProps) {
             </div>
            </div>
 
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 border p-2 rounded-[24px]">
               {/* CTA Button - hidden on mobile */}
-              <Button variant="outline" size="sm" className="hidden md:inline-flex text-[16px]">
+              <button
+               
+                className={`hidden md:inline-flex text-[16px] ${
+                  isDark && !isScrolled 
+                    ? "border-[#5F6368] text-[#5F6368] hover:bg-gray-100 hover:text-[#1C1C1C]" 
+                    : "border-white/30 text-white hover:bg-white/10"
+                }`}
+                onClick={onJoinWaitlist}
+              >
                 Be an early user
-              </Button>
+              </button>
 
               {/* Hamburger Menu Button */}
               <button
@@ -117,7 +139,7 @@ export default function Navbar({ variant = "default" }: NavbarProps) {
           {/* Bottom Buttons */}
           <div className="fixed bottom-0 left-0 right-0 px-6 py-8 bg-white ">
             <div className="flex gap-4">
-              <button className="bg-[#E64D0B] rounded-[24px] flex-1" onClick={() => setIsMenuOpen(false)}>
+              <button className="bg-[#E64D0B] rounded-[24px] flex-1" onClick={() => { setIsMenuOpen(false); onJoinWaitlist?.(); }}>
                 <p className="font-SemiBold text-[16px]">Join waitlist</p>
               </button>
               <button className="flex-1" onClick={() => setIsMenuOpen(false)}>

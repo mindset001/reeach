@@ -15,6 +15,7 @@ export default function FeatureCard({
   image,
   imagePosition,
   ctaText = "Join waitlist",
+  onCtaClick,
 }: FeatureCardProps) {
   const isImageRight = imagePosition === "right";
 
@@ -35,11 +36,8 @@ export default function FeatureCard({
           <p className="text-[#5F6368] leading-relaxed text-[16px] font-regular">{description}</p>
         </div>
         <div className="flex gap-4">
-          <button className="text-[#E64D0B] font-regular text-[16px] hover:text-orange-700 transition-colors">
+          <button className="text-[#E64D0B] font-regular text-[16px] hover:text-orange-700 transition-colors" onClick={onCtaClick}>
             {ctaText}
-          </button>
-          <button className="text-[#E64D0B] font-regular text-[16px] hover:text-gray-700 transition-colors">
-            See more
           </button>
         </div>
       </div>

@@ -7,7 +7,11 @@ import {
   ADDITIONAL_CONSUMER_FEATURES,
 } from "@/constants/consumerFeatures";
 
-export default function ConsumerSection() {
+interface ConsumerSectionProps {
+  onJoinWaitlist?: () => void;
+}
+
+export default function ConsumerSection({ onJoinWaitlist }: ConsumerSectionProps) {
   const [activeFeature, setActiveFeature] = useState(0);
 
   useEffect(() => {
@@ -47,6 +51,7 @@ export default function ConsumerSection() {
               description={feature.description}
               image={feature.image}
               imagePosition={feature.imagePosition}
+              onCtaClick={onJoinWaitlist}
             />
           ))}
         </div>
@@ -92,7 +97,10 @@ export default function ConsumerSection() {
           </div>
 
           <div className="flex gap-4 mt-8">
-            <button className="text-[#E64D0B] font-regular text-[16px] hover:text-orange-700 transition-colors">
+            <button 
+              onClick={onJoinWaitlist}
+              className="text-[#E64D0B] font-regular text-[16px] hover:text-orange-700 transition-colors"
+            >
               Join waitlist
             </button>
             <button className="text-[#E64D0B] font-regular text-[16px] hover:text-gray-700 transition-colors">

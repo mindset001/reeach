@@ -7,7 +7,11 @@ import {
   ADDITIONAL_DISTRIBUTOR_FEATURES,
 } from "@/constants/distributorFeatures";
 
-export default function DistributorSection() {
+interface DistributorSectionProps {
+  onJoinWaitlist?: () => void;
+}
+
+export default function DistributorSection({ onJoinWaitlist }: DistributorSectionProps) {
   const [activeFeature, setActiveFeature] = useState(0);
 
   useEffect(() => {
@@ -46,6 +50,7 @@ export default function DistributorSection() {
               description={feature.description}
               image={feature.image}
               imagePosition={feature.imagePosition}
+              onCtaClick={onJoinWaitlist}
             />
           ))}
         </div>
@@ -91,7 +96,10 @@ export default function DistributorSection() {
           </div>
 
           <div className="flex gap-4 mt-8">
-            <button className="text-[#E64D0B] font-regular text-[16px] hover:text-orange-700 transition-colors">
+            <button 
+              onClick={onJoinWaitlist}
+              className="text-[#E64D0B] font-regular text-[16px] hover:text-orange-700 transition-colors"
+            >
               Join waitlist
             </button>
             <button className="text-[#E64D0B] font-regular text-[16px] hover:text-gray-700 transition-colors">

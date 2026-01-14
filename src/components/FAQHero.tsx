@@ -3,10 +3,10 @@ import FaqBg from "../../public/images/faq-bg.jpg";
 
 export default function FAQHero() {
   return (
-    <section className="relative min-h-[60vh] bg-[#6A2406] flex items-center overflow-hidden">
+    <section className="relative min-h-[70vh] bg-[#6A2406] flex items-center overflow-hidden">
       {/* Background Image */}
       <div
-        className="absolute inset-0 z-0 opacity-4"
+        className="absolute inset-0 z-0 opacity-10"
         style={{
           backgroundImage: `url(${FaqBg.src})`,
           backgroundSize: "cover",

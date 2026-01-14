@@ -234,7 +234,7 @@ export default function InvestorsRaising() {
         <h3 className="text-2xl font-semibold text-[#1C1C1C] mb-4">
           Learn more about what we're building.
         </h3>
-        <p className="text-[#5F6368] mb-6">
+        <p className="text-[#1C1C1C] mb-6">
           When we receive your email, we will be happy to send:
         </p>
         <ul className="space-y-4">
@@ -243,7 +243,7 @@ export default function InvestorsRaising() {
               <span className=" bg-[#F9E9CA] rounded-full p-2 ">
                 <div className="w-3 h-3 rounded-full bg-[#EA5228] flex-shrink-0" />
               </span>
-              <span className="text-[#1C1C1C]">{item}</span>
+              <span className="text-[#585757]">{item}</span>
             </li>
           ))}
         </ul>

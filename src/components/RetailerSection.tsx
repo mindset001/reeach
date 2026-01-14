@@ -7,7 +7,11 @@ import {
   ADDITIONAL_RETAILER_FEATURES,
 } from "@/constants/retailerFeatures";
 
-export default function RetailerSection() {
+interface RetailerSectionProps {
+  onJoinWaitlist?: () => void;
+}
+
+export default function RetailerSection({ onJoinWaitlist }: RetailerSectionProps) {
   const [activeFeature, setActiveFeature] = useState(0);
 
   useEffect(() => {
@@ -46,6 +50,7 @@ export default function RetailerSection() {
               description={feature.description}
               image={feature.image}
               imagePosition={feature.imagePosition}
+              onCtaClick={onJoinWaitlist}
             />
           ))}
         </div>
@@ -91,7 +96,10 @@ export default function RetailerSection() {
           </div>
 
           <div className="flex gap-4 mt-8">
-            <button className="text-[#E64D0B] font-regular text-[16px] hover:text-orange-700 transition-colors">
+            <button 
+              onClick={onJoinWaitlist}
+              className="text-[#E64D0B] font-regular text-[16px] hover:text-orange-700 transition-colors"
+            >
               Join waitlist
             </button>
             <button className="text-[#E64D0B] font-regular text-[16px] hover:text-gray-700 transition-colors">
