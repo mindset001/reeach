@@ -69,17 +69,27 @@ export default function ManufacturerSection({ onJoinWaitlist }: ManufacturerSect
                 <button
                   key={index}
                   onClick={() => handleFeatureClick(index)}
-                  className={`w-full text-left border-l-4 pl-4 py-3 transition-all ${
+                  className={`w-full text-left relative pl-4 py-3 transition-all duration-300 ${
                     activeFeature === index
-                      ? "border-[#E64D0B]"
-                      : "border-[#D9D9D9]"
+                      ? "bg-gradient-to-r from-[#FFF7F3] to-transparent"
+                      : "hover:bg-gray-50/50"
                   }`}
                 >
-                  <h4 className=" text-[#1C1C1C] text-[18px] font-[600] mb-2">
+                  {/* Static border always visible */}
+                  <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#D9D9D9]" />
+                  
+                  {/* Animated progress border for active item */}
+                  {activeFeature === index && (
+                    <div className="absolute left-0 top-0 w-1 h-0 bg-[#E64D0B] animate-[fillDown_5s_linear_forwards]" />
+                  )}
+                  
+                  <h4 className={`text-[18px] font-[600] mb-2 transition-colors ${
+                    activeFeature === index ? "text-[#E64D0B]" : "text-[#1C1C1C]"
+                  }`}>
                     {feature.title}
                   </h4>
                   {activeFeature === index && (
-                    <p className="text-[#5F6368] text-[16px] font-[400] md:w-[90%]">{feature.description}</p>
+                    <p className="text-[#5F6368] text-[16px] font-[400] md:w-[90%] animate-in fade-in slide-in-from-left-2 duration-300">{feature.description}</p>
                   )}
                 </button>
               ))}

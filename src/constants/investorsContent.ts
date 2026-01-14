@@ -68,6 +68,17 @@ export const SOLUTION_CONTENT = {
   image: "/images/investors/solution-bg.jpg",
 };
 
+export const SOLUTION_SLIDES = [
+  {
+    title: "3 Products.",
+    subtitle: "1 AI Platform. 1 Commerce Operating System.",
+    tagline: "Full real time market visibility",
+    description:
+      "Reeach becomes Africa's retail operating system—the essential infrastructure that enables commerce, transparency, and intelligence across 1.4 billion consumers, millions of retailers, and thousands of manufacturers and distributors.",
+    image: "/images/investors/solution-bg.jpg",
+  },
+];
+
 export const MORE_INFO_ITEMS = [
   "One-page executive summary",
   "15-slide pitch deck (with detailed Unit Economics)",

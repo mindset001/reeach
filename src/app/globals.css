@@ -89,3 +89,13 @@ body {
   color: var(--foreground);
   font-family: 'Aileron', Arial, Helvetica, sans-serif;
 }
+
+/* Progress loader animation for feature borders */
+@keyframes fillDown {
+  from {
+    height: 0%;
+  }
+  to {
+    height: 100%;
+  }
+}
