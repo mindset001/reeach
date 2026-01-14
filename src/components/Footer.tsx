@@ -8,7 +8,18 @@ import {
   SOCIAL_LINKS,
 } from "@/constants/footer";
 
-export default function Footer() {
+interface FooterProps {
+  onJoinWaitlist?: (userType?: string) => void;
+}
+
+export default function Footer({ onJoinWaitlist }: FooterProps) {
+  const userTypeMap: { [key: string]: string } = {
+    "Manufacturers": "manufacturer",
+    "Distributors": "distributor",
+    "Retailers": "retailer",
+    "Consumers": "consumer",
+  };
+
   return (
     <footer className="bg-gray-50 py-16">
       <div className="container mx-auto px-6">
@@ -75,8 +86,8 @@ export default function Footer() {
               <p className="text-gray-600 text-sm leading-relaxed">
                 {column.description}
               </p>
-              <Link
-                href={column.notifyLink}
+              <button
+                onClick={() => onJoinWaitlist?.(userTypeMap[column.title])}
                 className="inline-flex items-center gap-2 text-[#000000] font-light text-[16px] hover:text-orange-700 transition-colors"
               >
                 Get notified at launch
@@ -93,7 +104,7 @@ export default function Footer() {
                     d="M9 5l7 7-7 7"
                   />
                 </svg>
-              </Link>
+              </button>
             </div>
           ))}
         </div>

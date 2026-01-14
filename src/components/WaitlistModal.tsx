@@ -16,9 +16,10 @@ import Eight from '../../public/images/seven.jpg';
 interface WaitlistModalProps {
     isOpen: boolean;
     onClose: () => void;
+    initialUserType?: string;
 }
 
-export default function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
+export default function WaitlistModal({ isOpen, onClose, initialUserType }: WaitlistModalProps) {
     const [selectedWaitlist, setSelectedWaitlist] = useState<string | null>(null);
     
     // Form fields
@@ -35,13 +36,16 @@ export default function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
     useEffect(() => {
         if (isOpen) {
             document.body.style.overflow = "hidden";
+            if (initialUserType) {
+                setSelectedWaitlist(initialUserType);
+            }
         } else {
             document.body.style.overflow = "unset";
         }
         return () => {
             document.body.style.overflow = "unset";
         };
-    }, [isOpen]);
+    }, [isOpen, initialUserType]);
 
     const handleBack = () => {
         setSelectedWaitlist(null);

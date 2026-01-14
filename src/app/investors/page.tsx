@@ -9,16 +9,25 @@ import WaitlistModal from "@/components/WaitlistModal";
 
 export default function InvestorsPage() {
   const [isWaitlistModalOpen, setIsWaitlistModalOpen] = useState(false);
-  const openWaitlistModal = () => setIsWaitlistModalOpen(true);
-  const closeWaitlistModal = () => setIsWaitlistModalOpen(false);
+  const [selectedUserType, setSelectedUserType] = useState<string | undefined>(undefined);
+  
+  const openWaitlistModal = (userType?: string) => {
+    setSelectedUserType(userType);
+    setIsWaitlistModalOpen(true);
+  };
+  
+  const closeWaitlistModal = () => {
+    setIsWaitlistModalOpen(false);
+    setSelectedUserType(undefined);
+  };
 
   return (
     <div className="min-h-screen">
       <Navbar onJoinWaitlist={openWaitlistModal} />
       <InvestorsHero />
       <InvestorsRaising />
-      <Footer />
-      <WaitlistModal isOpen={isWaitlistModalOpen} onClose={closeWaitlistModal} />
+      <Footer onJoinWaitlist={openWaitlistModal} />
+      <WaitlistModal isOpen={isWaitlistModalOpen} onClose={closeWaitlistModal} initialUserType={selectedUserType} />
     </div>
   );
 }

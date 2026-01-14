@@ -30,8 +30,8 @@ export default function Home() {
       <RetailerSection onJoinWaitlist={openWaitlistModal} />
       <ConsumerSection onJoinWaitlist={openWaitlistModal} />
       <NotifySection />
-      <Footer />
-      <WaitlistModal isOpen={isWaitlistModalOpen} onClose={closeWaitlistModal} />
+      <Footer onJoinWaitlist={openWaitlistModal} />
+      <WaitlistModal isOpen={isWaitlistModalOpen} onClose={closeWaitlistModal} initialUserType={selectedUserType} />
     </div>
   );
 }
