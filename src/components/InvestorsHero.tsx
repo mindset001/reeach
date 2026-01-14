@@ -42,7 +42,7 @@ export default function InvestorsHero() {
           <div className="flex justify-center md:justify-end">
             <div className="relative w-full max-w-[600px] h-[400px] md:h-[500px]">
               {/* Top Left Puzzle Piece */}
-              <div className="absolute top-0 left-8 md:left-16 w-[45%] md:w-[50%] z-10">
+              <div className="absolute top-0 left-8 md:left-16 w-[65%] md:w-[50%] z-10">
                 <Image
                   src={One}
                   alt="Africa Commerce Market"
@@ -54,7 +54,7 @@ export default function InvestorsHero() {
               </div>
               
               {/* Bottom Right Puzzle Piece */}
-              <div className="absolute bottom-0 right-8 md:right-16 w-[45%] md:w-[50%]">
+              <div className="absolute bottom-0 right-8 md:right-16 w-[65%] md:w-[50%]">
                 <Image
                   src={Two}
                   alt="Africa Commerce Market"

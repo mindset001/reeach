@@ -80,5 +80,5 @@ export const MORE_INFO_ITEMS = [
 
 export const CONTACT_INFO = {
   email: "operations@reeach.co",
-  founderEmail: "james.nwarikwa@reeach.co",
+  founderEmail: "james.nwankwo@reeach.co",
 };

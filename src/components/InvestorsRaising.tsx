@@ -228,9 +228,9 @@ export default function InvestorsRaising() {
   );
 
   const renderMoreInformation = () => (
-    <div className="grid md:grid-cols-2 gap-12">
+    <div className="grid md:grid-cols-2 gap-12 md:divide-x divide-gray-300">
       {/* Left Side - What we'll send */}
-      <div>
+      <div className="md:pr-12">
         <h3 className="text-2xl font-semibold text-[#1C1C1C] mb-4">
           Learn more about what we're building.
         </h3>
@@ -239,8 +239,10 @@ export default function InvestorsRaising() {
         </p>
         <ul className="space-y-4">
           {MORE_INFO_ITEMS.map((item, index) => (
-            <li key={index} className="flex items-start gap-3">
-              <span className="w-2 h-2 rounded-full bg-[#E64D0B] mt-2 flex-shrink-0" />
+            <li key={index} className="flex items-start gap-3 border-t pt-4">
+              <span className=" bg-[#F9E9CA] rounded-full p-2 ">
+                <div className="w-3 h-3 rounded-full bg-[#EA5228] flex-shrink-0" />
+              </span>
               <span className="text-[#1C1C1C]">{item}</span>
             </li>
           ))}
@@ -248,7 +250,7 @@ export default function InvestorsRaising() {
       </div>
 
       {/* Right Side - Contact */}
-      <div>
+      <div className="md:pl-12">
         <h3 className="text-2xl font-semibold text-[#1C1C1C] mb-6">
           Contact us:
         </h3>
