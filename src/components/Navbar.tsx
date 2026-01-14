@@ -6,8 +6,20 @@ import { useState } from "react";
 import Button from "./Button";
 import { NAV_LINKS } from "@/constants/navigation";
 
-export default function Navbar() {
+interface NavbarProps {
+  variant?: "default" | "dark";
+}
+
+export default function Navbar({ variant = "default" }: NavbarProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const isDark = variant === "dark";
+  const logoSrc = isDark ? "/images/black-logo.png" : "/images/white-logo.png";
+  const textColor = isDark ? "text-[#5F6368]" : "text-white";
+  const hoverColor = isDark ? "hover:text-[#1C1C1C]" : "hover:text-white/80";
+  const hamburgerBg = isDark ? "bg-gray-100" : "bg-[#EFEFEF1A]";
+  const hamburgerHoverBg = isDark ? "hover:bg-gray-200" : "hover:bg-[#5A6A6F]";
+  const hamburgerIconColor = isDark ? "bg-gray-800" : "bg-white";
 
   return (
     <>
@@ -18,7 +30,7 @@ export default function Navbar() {
                {/* Logo */}
             <Link href="/" className="flex items-center gap-2">
               <Image
-                src="/images/white-logo.png"
+                src={logoSrc}
                 alt="Reeach Logo"
                 width={60}
                 height={40}
@@ -32,7 +44,7 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-white text-[17px] font-medium hover:text-white/80 transition-colors"
+                  className={`${textColor} text-[17px] font-medium ${hoverColor} transition-colors`}
                 >
                   {link.label}
                 </Link>
@@ -49,13 +61,13 @@ export default function Navbar() {
               {/* Hamburger Menu Button */}
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="md:hidden w-[36px] h-[26px] flex items-center justify-center bg-[#EFEFEF1A] rounded-[12px] hover:bg-[#5A6A6F] transition-colors"
+                className={`md:hidden w-[36px] h-[26px] flex items-center justify-center ${hamburgerBg} rounded-[12px] ${hamburgerHoverBg} transition-colors`}
                 aria-label="Toggle menu"
               >
                 <div className="w-5 flex flex-col gap-[2px]">
-                  <span className={`h-[2px] w-full bg-white rounded-full transition-all duration-300 ${isMenuOpen ? 'rotate-45 translate-y-[7px]' : ''}`} />
-                  <span className={`h-[2px] w-full bg-white rounded-full transition-all duration-300 ${isMenuOpen ? 'opacity-0' : ''}`} />
-                  <span className={`h-[2px] w-full bg-white rounded-full transition-all duration-300 ${isMenuOpen ? '-rotate-45 -translate-y-[7px]' : ''}`} />
+                  <span className={`h-[2px] w-full ${hamburgerIconColor} rounded-full transition-all duration-300 ${isMenuOpen ? 'rotate-45 translate-y-[7px]' : ''}`} />
+                  <span className={`h-[2px] w-full ${hamburgerIconColor} rounded-full transition-all duration-300 ${isMenuOpen ? 'opacity-0' : ''}`} />
+                  <span className={`h-[2px] w-full ${hamburgerIconColor} rounded-full transition-all duration-300 ${isMenuOpen ? '-rotate-45 -translate-y-[7px]' : ''}`} />
                 </div>
               </button>
             </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import FeatureCard from "./FeatureCard";
 import {
   MANUFACTURER_FEATURES,
@@ -9,6 +9,21 @@ import {
 
 export default function ManufacturerSection() {
   const [activeFeature, setActiveFeature] = useState(0);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveFeature((prev) => 
+        (prev + 1) % ADDITIONAL_MANUFACTURER_FEATURES.length
+      );
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const handleFeatureClick = (index: number) => {
+    setActiveFeature(index);
+  };
 
   return (
     <section className="py-20 bg-white" id="manufacturer-section">
@@ -48,7 +63,7 @@ export default function ManufacturerSection() {
               {ADDITIONAL_MANUFACTURER_FEATURES.map((feature, index) => (
                 <button
                   key={index}
-                  onClick={() => setActiveFeature(index)}
+                  onClick={() => handleFeatureClick(index)}
                   className={`w-full text-left border-l-4 pl-4 py-3 transition-all ${
                     activeFeature === index
                       ? "border-[#E64D0B]"
@@ -59,7 +74,7 @@ export default function ManufacturerSection() {
                     {feature.title}
                   </h4>
                   {activeFeature === index && (
-                    <p className="text-[#5F6368] text-[16px] font-[400] md:w-[50%]">{feature.description}</p>
+                    <p className="text-[#5F6368] text-[16px] font-[400] md:w-[90%]">{feature.description}</p>
                   )}
                 </button>
               ))}

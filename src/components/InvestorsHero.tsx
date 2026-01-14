@@ -1,9 +1,23 @@
 import Image from "next/image";
+import One from '../../public/images/Group 3.png'
+import Two from '../../public/images/Group 4.png'
+import Three from '../../public/images/investors-bg.jpg'
 
 export default function InvestorsHero() {
   return (
     <section className="relative min-h-screen bg-[#E64D0B] flex items-center overflow-hidden">
-      <div className="container mx-auto px-6 py-32 md:py-20">
+      {/* Background Image */}
+      <div
+        className="absolute inset-0 z-0 opacity-2"
+        style={{
+          backgroundImage: `url(${Three.src})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      />
+      
+      <div className="container mx-auto px-6 py-32 md:py-20 relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-6 text-white">
@@ -24,16 +38,32 @@ export default function InvestorsHero() {
             </p>
           </div>
 
-          {/* Right Content - Africa Map Image */}
+          {/* Right Content - Puzzle Pieces Arrangement */}
           <div className="flex justify-center md:justify-end">
-            <div className="relative w-full max-w-[500px] aspect-square">
-              <Image
-                src="/images/africa-money-map.png"
-                alt="Africa Commerce Market"
-                width={500}
-                height={500}
-                className="w-full h-auto object-contain"
-              />
+            <div className="relative w-full max-w-[600px] h-[400px] md:h-[500px]">
+              {/* Top Left Puzzle Piece */}
+              <div className="absolute top-0 left-8 md:left-16 w-[45%] md:w-[50%] z-10">
+                <Image
+                  src={One}
+                  alt="Africa Commerce Market"
+                  width={300}
+                  height={300}
+                  className="w-full h-auto object-contain"
+                  priority
+                />
+              </div>
+              
+              {/* Bottom Right Puzzle Piece */}
+              <div className="absolute bottom-0 right-8 md:right-16 w-[45%] md:w-[50%]">
+                <Image
+                  src={Two}
+                  alt="Africa Commerce Market"
+                  width={300}
+                  height={300}
+                  className="w-full h-auto object-contain"
+                  priority
+                />
+              </div>
             </div>
           </div>
         </div>

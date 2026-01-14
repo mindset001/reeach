@@ -2,15 +2,13 @@
 
 import { useState } from "react";
 import Button from "./Button";
+import WaitlistModal from "./WaitlistModal";
 
 export default function Hero() {
-  const [email, setEmail] = useState("");
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleJoinWaitlist = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle waitlist submission
-    console.log("Email:", email);
-  };
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
 
   return (
     <section className="relative min-h-screen flex items-end md:items-center justify-center overflow-hidden">
@@ -49,7 +47,7 @@ export default function Hero() {
             </p>
 
             <div className="flex flex-col md:flex-row gap-3 md:gap-4 max-w-sm">
-              <Button variant="primary" size="md">
+              <Button variant="primary" size="md" onClick={openModal}>
                 Join waitlist
               </Button>
               <Button variant="secondary" size="md">
@@ -61,18 +59,19 @@ export default function Hero() {
           {/* Right Content - Waitlist Form - Hidden on mobile */}
           <div className="hidden md:flex justify-center md:justify-end pt-12">
             <div className="w-[595px] h-[652px] border border-white rounded-2xl p-8 w-full max-w-md min-h-[400px] flex flex-col justify-end">
-              <form onSubmit={handleJoinWaitlist} className="space-y-6">
-                <button
-                  type="submit"
-                  className="w-full px-6 py-4 rounded-full bg-white text-orange-600 font-semibold hover:bg-gray-100 transition-colors"
-                >
-                  Join waitlist
-                </button>
-              </form>
+              <button
+                onClick={openModal}
+                className="w-full px-6 py-4 rounded-full bg-white text-orange-600 font-semibold hover:bg-gray-100 transition-colors"
+              >
+                Join
+              </button>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Waitlist Modal */}
+      <WaitlistModal isOpen={isModalOpen} onClose={closeModal} />
     </section>
   );
 }

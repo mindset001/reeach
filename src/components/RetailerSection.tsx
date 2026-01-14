@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import FeatureCard from "./FeatureCard";
 import {
   RETAILER_FEATURES,
@@ -9,6 +9,20 @@ import {
 
 export default function RetailerSection() {
   const [activeFeature, setActiveFeature] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveFeature((prev) => 
+        (prev + 1) % ADDITIONAL_RETAILER_FEATURES.length
+      );
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const handleFeatureClick = (index: number) => {
+    setActiveFeature(index);
+  };
 
   return (
     <section className="py-20 bg-white" id="retailer-section">
@@ -47,7 +61,7 @@ export default function RetailerSection() {
               {ADDITIONAL_RETAILER_FEATURES.map((feature, index) => (
                 <button
                   key={index}
-                  onClick={() => setActiveFeature(index)}
+                  onClick={() => handleFeatureClick(index)}
                   className={`w-full text-left border-l-4 pl-4 py-3 transition-all ${
                     activeFeature === index
                       ? "border-[#E64D0B]"

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import {
   INVESTOR_TABS,
@@ -17,29 +17,45 @@ export default function InvestorsRaising() {
   const [activeSection, setActiveSection] = useState(0);
   const [currentSlide, setCurrentSlide] = useState(0);
 
+  useEffect(() => {
+    let interval: NodeJS.Timeout;
+    
+    if (activeTab === "opportunity") {
+      interval = setInterval(() => {
+        setActiveSection((prev) => (prev + 1) % OPPORTUNITY_SECTIONS.length);
+      }, 5000);
+    } else if (activeTab === "solution") {
+      interval = setInterval(() => {
+        setActiveSection((prev) => (prev + 1) % SOLUTION_SECTIONS.length);
+      }, 5000);
+    }
+
+    return () => clearInterval(interval);
+  }, [activeTab]);
+
+  const handleSectionClick = (index: number) => {
+    setActiveSection(index);
+  };
+
   const renderOpportunity = () => (
-    <div className="grid md:grid-cols-[300px_1fr] gap-8">
+    <div className="grid md:grid-cols-2 gap-8">
       {/* Left Sidebar */}
-      <div className="space-y-2">
+      <div className="space-y-4 order-2 md:order-1">
         {OPPORTUNITY_SECTIONS.map((section, index) => (
           <button
             key={section.id}
-            onClick={() => setActiveSection(index)}
-            className={`w-full text-left p-4 rounded-lg transition-all ${
+            onClick={() => handleSectionClick(index)}
+            className={`w-full text-left border-l-4 pl-4 py-3 transition-all ${
               activeSection === index
-                ? "bg-white shadow-sm"
-                : "hover:bg-gray-50"
+                ? "border-[#E64D0B]"
+                : "border-[#D9D9D9]"
             }`}
           >
-            <h4
-              className={`text-[16px] font-semibold mb-2 ${
-                activeSection === index ? "text-[#E64D0B]" : "text-[#1C1C1C]"
-              }`}
-            >
+            <h4 className="text-[#1C1C1C] text-[18px] font-[600] mb-2">
               {section.title}
             </h4>
             {activeSection === index && (
-              <p className="text-[14px] text-[#5F6368] whitespace-pre-line leading-relaxed">
+              <p className="text-[#5F6368] text-[16px] font-[400] md:w-[90%] whitespace-pre-line leading-relaxed">
                 {section.subtitle}
               </p>
             )}
@@ -48,7 +64,7 @@ export default function InvestorsRaising() {
       </div>
 
       {/* Right Content Area */}
-      <div className="relative rounded-2xl overflow-hidden min-h-[400px] bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center">
+      <div className="relative rounded-[16px] overflow-hidden min-h-[400px] bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center order-1 md:order-2">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-50"
           style={{
@@ -131,28 +147,24 @@ export default function InvestorsRaising() {
   );
 
   const renderSolution = () => (
-    <div className="grid md:grid-cols-[300px_1fr] gap-8">
+    <div className="grid md:grid-cols-2 gap-8">
       {/* Left Sidebar */}
-      <div className="space-y-2">
+      <div className="space-y-4 order-2 md:order-1">
         {SOLUTION_SECTIONS.map((section, index) => (
           <button
             key={section.id}
-            onClick={() => setActiveSection(index)}
-            className={`w-full text-left p-4 rounded-lg transition-all ${
+            onClick={() => handleSectionClick(index)}
+            className={`w-full text-left border-l-4 pl-4 py-3 transition-all ${
               activeSection === index
-                ? "bg-white shadow-sm"
-                : "hover:bg-gray-50"
+                ? "border-[#E64D0B]"
+                : "border-[#D9D9D9]"
             }`}
           >
-            <h4
-              className={`text-[16px] font-semibold mb-2 ${
-                activeSection === index ? "text-[#E64D0B]" : "text-[#1C1C1C]"
-              }`}
-            >
+            <h4 className="text-[#1C1C1C] text-[18px] font-[600] mb-2">
               {section.title}
             </h4>
             {activeSection === index && (
-              <p className="text-[14px] text-[#5F6368] whitespace-pre-line leading-relaxed">
+              <p className="text-[#5F6368] text-[16px] font-[400] md:w-[90%] whitespace-pre-line leading-relaxed">
                 {section.subtitle}
               </p>
             )}
@@ -161,7 +173,7 @@ export default function InvestorsRaising() {
       </div>
 
       {/* Right Content Area */}
-      <div className="relative rounded-2xl overflow-hidden min-h-[400px] bg-[#E64D0B] flex items-center justify-center p-8">
+      <div className="relative rounded-[16px] overflow-hidden min-h-[400px] bg-[#E64D0B] flex items-center justify-center p-8 order-1 md:order-2">
         <div className="text-center text-white max-w-2xl">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
             {SOLUTION_CONTENT.title}
