@@ -36,7 +36,7 @@ export default function Navbar({ variant = "default", onJoinWaitlist }: NavbarPr
   return (
     <>
       <nav className={`fixed top-0 h-[66px] left-0 right-0 z-50 transition-colors duration-300 ${
-        isScrolled ? "bg-black" : "bg-transparent backdrop-blur-[4px]"
+        isScrolled ? "bg-black opacity-60" : "bg-transparent backdrop-blur-[4px]"
       }`}>
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
@@ -48,7 +48,7 @@ export default function Navbar({ variant = "default", onJoinWaitlist }: NavbarPr
                 alt="Reeach Logo"
                 width={60}
                 height={40}
-                className="h-8 w-auto"
+                className="h-6 w-auto"
               />
             </Link>
 

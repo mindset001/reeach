@@ -20,7 +20,7 @@ export default function Footer() {
               alt="Reeach Logo"
               width={120}
               height={40}
-              className="h-8 w-auto"
+              className="h-6 w-auto"
             />
           </Link>
 

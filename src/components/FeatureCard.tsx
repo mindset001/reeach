@@ -21,7 +21,7 @@ export default function FeatureCard({
 
   return (
     <div
-      className={`grid md:grid-cols-2 gap-8 items-center ${
+      className={`grid md:grid-cols-2 gap-14 items-center ${
         isImageRight ? "" : "md:grid-flow-dense"
       }`}
     >
@@ -36,9 +36,9 @@ export default function FeatureCard({
           <p className="text-[#5F6368] leading-relaxed text-[16px] font-regular">{description}</p>
         </div>
         <div className="flex gap-4">
-          <button className="text-[#E64D0B] font-regular text-[16px] hover:text-orange-700 transition-colors" onClick={onCtaClick}>
+          {/* <button className="text-[#E64D0B] font-regular text-[16px] hover:text-orange-700 transition-colors" onClick={onCtaClick}>
             {ctaText}
-          </button>
+          </button> */}
         </div>
       </div>
 

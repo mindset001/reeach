@@ -35,16 +35,16 @@ export default function UseCasesSection() {
       </section>
 
       {/* Tabs - Sticky - Outside section to work across all following sections */}
-      <div className="sticky top-[66px] z-40 bg-white  py-4 shadow-sm">
+      <div className="sticky top-[66px] z-40 bg-white py-4 shadow-sm">
         <div className="container mx-auto px-6">
-          <div className="flex justify-center overflow-x-auto">
-            <div className="inline-flex border border-[#F1D0C2] rounded-[88px] p-2 shadow-sm">
-              <div className="flex justify-center gap-3 whitespace-nowrap">
+          <div className="flex justify-center ">
+            <div className="inline-flex border overflow-x-auto scrollbar-hide border-[#F1D0C2] rounded-[88px] p-2 shadow-sm min-w-full md:min-w-0">
+              <div className="flex justify-start md:justify-center gap-3 whitespace-nowrap w-full">
                 {USER_TYPES.map((type) => (
                   <button
                     key={type.id}
                     onClick={() => handleTabClick(type.id)}
-                    className={`px-6 py-3 rounded-full text-[14px] font-medium transition-all duration-200 flex-shrink-0 ${
+                    className={`px-4 md:px-6 py-3 rounded-full text-[14px] font-medium transition-all duration-200 flex-shrink-0 ${
                       activeTab === type.id
                         ? "bg-[#FFF7F3] text-[#1C1C1C]"
                         : "text-[#5F6368] hover:text-[#1C1C1C] hover:bg-[#E64D0B] corsor-pointer"
