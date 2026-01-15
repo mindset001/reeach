@@ -14,8 +14,10 @@ interface NavbarProps {
 export default function Navbar({ variant = "default", onJoinWaitlist }: NavbarProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
+    setIsMounted(true);
     const handleScroll = () => {
       // Check if scrolled past hero section (approximate height)
       setIsScrolled(window.scrollY > window.innerHeight * 0.8);
@@ -26,12 +28,12 @@ export default function Navbar({ variant = "default", onJoinWaitlist }: NavbarPr
   }, []);
 
   const isDark = variant === "dark";
-  const logoSrc = (isDark && !isScrolled) ? "/images/black-logo.png" : "/images/white-logo.png";
-  const textColor = (isDark && !isScrolled) ? "text-[#5F6368]" : "text-white";
-  const hoverColor = (isDark && !isScrolled) ? "hover:text-[#1C1C1C]" : "hover:text-white/80";
-  const hamburgerBg = (isDark && !isScrolled) ? "bg-gray-100" : "bg-[#EFEFEF1A]";
-  const hamburgerHoverBg = (isDark && !isScrolled) ? "hover:bg-gray-200" : "hover:bg-[#5A6A6F]";
-  const hamburgerIconColor = (isDark && !isScrolled) ? "bg-gray-800" : "bg-white";
+  const logoSrc = (isDark && !isScrolled && isMounted) ? "/images/black-logo.png" : "/images/white-logo.png";
+  const textColor = (isDark && !isScrolled && isMounted) ? "text-[#5F6368]" : "text-white";
+  const hoverColor = (isDark && !isScrolled && isMounted) ? "hover:text-[#1C1C1C]" : "hover:text-white/80";
+  const hamburgerBg = (isDark && !isScrolled && isMounted) ? "bg-gray-100" : "bg-[#EFEFEF1A]";
+  const hamburgerHoverBg = (isDark && !isScrolled && isMounted) ? "hover:bg-gray-200" : "hover:bg-[#5A6A6F]";
+  const hamburgerIconColor = (isDark && !isScrolled && isMounted) ? "bg-gray-800" : "bg-white";
 
   return (
     <>

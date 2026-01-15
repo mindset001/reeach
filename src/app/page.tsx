@@ -15,6 +15,7 @@ import WaitlistModal from "@/components/WaitlistModal";
 
 export default function Home() {
   const [isWaitlistModalOpen, setIsWaitlistModalOpen] = useState(false);
+  const [selectedUserType, setSelectedUserType] = useState<string | undefined>(undefined);
 
   const openWaitlistModal = () => setIsWaitlistModalOpen(true);
   const closeWaitlistModal = () => setIsWaitlistModalOpen(false);
