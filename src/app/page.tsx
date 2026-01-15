@@ -17,7 +17,10 @@ export default function Home() {
   const [isWaitlistModalOpen, setIsWaitlistModalOpen] = useState(false);
   const [selectedUserType, setSelectedUserType] = useState<string | undefined>(undefined);
 
-  const openWaitlistModal = () => setIsWaitlistModalOpen(true);
+  const openWaitlistModal = (userType?: string) => {
+    setSelectedUserType(userType);
+    setIsWaitlistModalOpen(true);
+  };
   const closeWaitlistModal = () => setIsWaitlistModalOpen(false);
 
   return (
@@ -30,7 +33,7 @@ export default function Home() {
       <DistributorSection onJoinWaitlist={openWaitlistModal} />
       <RetailerSection onJoinWaitlist={openWaitlistModal} />
       <ConsumerSection onJoinWaitlist={openWaitlistModal} />
-      <NotifySection />
+      <NotifySection onJoinWaitlist={openWaitlistModal} />
       <Footer onJoinWaitlist={openWaitlistModal} />
       <WaitlistModal isOpen={isWaitlistModalOpen} onClose={closeWaitlistModal} initialUserType={selectedUserType} />
     </div>

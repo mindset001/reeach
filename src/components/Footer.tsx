@@ -46,7 +46,7 @@ export default function Footer({ onJoinWaitlist }: FooterProps) {
               >
                 {social.icon === "instagram" && (
                   <svg
-                    className="w-6 h-6"
+                    className="w-4 h-4"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
@@ -55,7 +55,7 @@ export default function Footer({ onJoinWaitlist }: FooterProps) {
                 )}
                 {social.icon === "twitter" && (
                   <svg
-                    className="w-6 h-6"
+                    className="w-4 h-4"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
@@ -64,7 +64,7 @@ export default function Footer({ onJoinWaitlist }: FooterProps) {
                 )}
                 {social.icon === "linkedin" && (
                   <svg
-                    className="w-6 h-6"
+                    className="w-4 h-4"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
@@ -165,7 +165,7 @@ export default function Footer({ onJoinWaitlist }: FooterProps) {
 
         {/* Bottom Text */}
         <div className="pt-8 border-t border-gray-200">
-          <p className="text-gray-500 text-xs">
+          <p className="text-gray-500 text-[16px]">
             Reeach Technologies & Innovations Ltd is registered in Nigeria and
             Sayles, Schain, Reeach, RUIS are registered trademarks of the
             company.
