@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import FeatureCard from "./FeatureCard";
+import DemoRequestModal from "./DemoRequestModal";
 import {
   MANUFACTURER_FEATURES,
   ADDITIONAL_MANUFACTURER_FEATURES,
@@ -14,6 +15,7 @@ interface ManufacturerSectionProps {
 
 export default function ManufacturerSection({ onJoinWaitlist }: ManufacturerSectionProps) {
   const [activeFeature, setActiveFeature] = useState(0);
+  const [isDemoModalOpen, setIsDemoModalOpen] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -94,7 +96,7 @@ export default function ManufacturerSection({ onJoinWaitlist }: ManufacturerSect
                   )}
                 </button>
               ))}
-                  <p className="text-[#5F6368] text-[16px]">See other unique features for manufacturers • <span className="text-[#E64D0B]"><a href="">Request a demo / presentation</a></span></p>
+                  <p className="text-[#5F6368] text-[16px]">See other unique features for manufacturers • <span className="text-[#E64D0B] cursor-pointer hover:underline" onClick={() => setIsDemoModalOpen(true)}>Request a demo / presentation</span></p>
             </div>
 
             <div className="md:w-[70%] flex items-center justify-center rounded-[16px] min-h-[300px] p-8 order-1 md:order-2 overflow-hidden">
@@ -133,6 +135,12 @@ export default function ManufacturerSection({ onJoinWaitlist }: ManufacturerSect
           </div>
         </div>
       </div>
+
+      <DemoRequestModal 
+        isOpen={isDemoModalOpen} 
+        onClose={() => setIsDemoModalOpen(false)} 
+        userType="manufacturer" 
+      />
     </section>
   );
 }
