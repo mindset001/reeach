@@ -64,7 +64,7 @@ export default function ManufacturerSection({ onJoinWaitlist }: ManufacturerSect
             There's more for manufacturers
           </h3>
 
-          <div className="flex gap-4 md:gap-8">
+          <div className="flex flex-col-reverse md:flex-row gap-4 md:gap-8">
             <div className="md:w-[30%] space-y-4 order-2 md:order-1">
               {ADDITIONAL_MANUFACTURER_FEATURES.map((feature, index) => (
                 <button
