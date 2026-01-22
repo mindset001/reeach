@@ -84,7 +84,7 @@ export default function UseCasesSection() {
       <div className="sticky top-[66px] z-40 bg-white py-4">
         <div className="container mx-auto px-6">
           <div className="flex justify-center ">
-            <div className="inline-flex border overflow-x-auto scrollbar-hide border-[#F1D0C2] rounded-[88px] p-2 shadow-sm min-w-full md:min-w-0">
+            <div className="inline-flex border overflow-x-auto scrollbar-hide border-[#F1D0C2] rounded-[88px] p-2 min-w-full md:min-w-0">
               <div className="flex justify-start md:justify-center gap-3 whitespace-nowrap w-full">
                 {USER_TYPES.map((type) => (
                   <button
