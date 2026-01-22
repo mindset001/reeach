@@ -20,7 +20,7 @@ export default function ManufacturerSection({ onJoinWaitlist }: ManufacturerSect
       setActiveFeature((prev) => 
         (prev + 1) % ADDITIONAL_MANUFACTURER_FEATURES.length
       );
-    }, 5000);
+    }, 10000);
 
     return () => clearInterval(interval);
   }, []);
@@ -64,8 +64,8 @@ export default function ManufacturerSection({ onJoinWaitlist }: ManufacturerSect
             There's more for manufacturers
           </h3>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-4 order-2 md:order-1">
+          <div className="flex gap-4 md:gap-8">
+            <div className="md:w-[30%] space-y-4 order-2 md:order-1">
               {ADDITIONAL_MANUFACTURER_FEATURES.map((feature, index) => (
                 <button
                   key={index}
@@ -77,11 +77,11 @@ export default function ManufacturerSection({ onJoinWaitlist }: ManufacturerSect
                   }`}
                 >
                   {/* Static border always visible */}
-                  <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#D9D9D9]" />
+                  <div className="absolute left-0 top-4 bottom-0 w-[2px] h-[15px] bg-[#D9D9D9]" />
                   
                   {/* Animated progress border for active item */}
                   {activeFeature === index && (
-                    <div className="absolute left-0 top-0 w-1 h-0 bg-[#E64D0B] animate-[fillDown_5s_linear_forwards]" />
+                    <div className="absolute left-0  w-[2px] h-[2px] bg-[#E64D0B] animate-[fillDown_5s_linear_forwards]" />
                   )}
                   
                   <h4 className={`text-[18px] font-[600] mb-2 transition-colors ${
@@ -97,7 +97,7 @@ export default function ManufacturerSection({ onJoinWaitlist }: ManufacturerSect
                   <p className="text-[#5F6368] text-[16px]">See other unique features for manufacturers • <span className="text-[#E64D0B]"><a href="">Request a demo / presentation</a></span></p>
             </div>
 
-            <div className="flex items-center justify-center rounded-[16px] min-h-[300px] p-8 order-1 md:order-2 overflow-hidden">
+            <div className="md:w-[70%] flex items-center justify-center rounded-[16px] min-h-[300px] p-8 order-1 md:order-2 overflow-hidden">
               {ADDITIONAL_MANUFACTURER_FEATURES[activeFeature].image && (
                 <Image
                   src={ADDITIONAL_MANUFACTURER_FEATURES[activeFeature].image}
