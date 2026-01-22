@@ -11,9 +11,8 @@
 !.yarn/versions
 
 
-*.mp4
+
 *.mov
-public/images/*.mp4
 public/images/*.mov
 
 # testing

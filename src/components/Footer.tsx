@@ -31,7 +31,7 @@ export default function Footer({ onJoinWaitlist }: FooterProps) {
               alt="Reeach Logo"
               width={120}
               height={40}
-              className="h-6 w-auto"
+              className="h-4 w-auto"
             />
           </Link>
 
@@ -83,8 +83,14 @@ export default function Footer({ onJoinWaitlist }: FooterProps) {
               <h3 className="font-bold text-gray-900 text-lg">
                 {column.title}
               </h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                {column.description}
+              <p className="text-gray-600 text-[15px] leading-relaxed">
+                {column.title === "Consumers" ? (
+                  <>
+                    Ready to shop smarter? Reeach App for consumers launches in May<br className="hidden md:inline" /> 2026.
+                  </>
+                ) : (
+                  column.description
+                )}
               </p>
               <button
                 onClick={() => onJoinWaitlist?.(userTypeMap[column.title])}

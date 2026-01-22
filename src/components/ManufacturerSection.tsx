@@ -39,7 +39,7 @@ export default function ManufacturerSection({ onJoinWaitlist }: ManufacturerSect
           </h2>
           <p className="text-lg text-gray-600">
             Know where your products are. How they're selling. What customers
-            actually want. In real time.
+            actually want.<br className="hidden md:block"/> In real time.
           </p>
         </div>
 

@@ -45,6 +45,6 @@ export const ENQUIRIES = [
 
 export const SOCIAL_LINKS = [
   { name: "Instagram", icon: "instagram", href: "#" },
-  { name: "Twitter", icon: "twitter", href: "#" },
+  // { name: "Twitter", icon: "twitter", href: "#" },
   { name: "LinkedIn", icon: "linkedin", href: "#" },
 ];

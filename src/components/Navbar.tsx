@@ -68,7 +68,7 @@ export default function Navbar({ variant = "default", onJoinWaitlist }: NavbarPr
             </div>
            </div>
 
-            <div className="flex items-center gap-4 border p-2 rounded-[24px]">
+            <div className="flex items-center gap-4 border py-2 px-4 rounded-[24px]">
               {/* CTA Button - hidden on mobile */}
               <button
                
