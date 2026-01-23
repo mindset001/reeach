@@ -12,7 +12,7 @@ export const MANUFACTURER_FEATURES = [
     title: "Real market demand intelligence",
     description:
       "Stop relying on retailer orders. See actual customer searches, purchases, and preferences. Data-driven forecasting replaces guesswork.",
-    image: "/images/new/man2.png",
+    image: "/images/new/man3.png",
     imagePosition: "left" as const,
   },
   {
@@ -20,7 +20,7 @@ export const MANUFACTURER_FEATURES = [
     title: "Discover and manage new distributors",
     description:
       "Find Reeach-vetted distributors. Build relationships. Mirror supply digitally. Track performance. Expand distribution systematically.",
-    image: "/images/new/man3.png",
+    image: "/images/new/man2.png",
     imagePosition: "right" as const,
   },
   {
