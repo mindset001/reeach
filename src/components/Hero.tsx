@@ -34,7 +34,7 @@ export default function Hero() {
       <div className="container mx-auto px-6 py-40 md:py-40 relative z-10 w-full">
         <div className="grid md:grid-cols-2 gap-16 items-start">
           {/* Left Content */}
-          <div className="space-y-6 md:pt-12">
+          <div className="space-y-6 md:pt-16">
             <h1 className="text-[32px] md:text-[32px] lg:text-[44px] font-bold text-white leading-tight">
               Every product.
               <br />
@@ -45,8 +45,10 @@ export default function Hero() {
               Connected.
             </h1>
 
-            <p className="text-[14px] md:text-[14px] text-white/90 max-w-md leading-relaxed">
-              The AI-powered platform that connects busy people in Africa find, buy, sell products & services that time. Verified. Simple.
+            <p className="text-[14px] md:text-[14px] text-white/90 max-w-sm leading-relaxed">
+             The AI-powered platform that connects how 
+people in Africa find, buy, sell products & services. 
+Real-time. Verified. Simple.
             </p>
 
             <div className="flex flex-col md:flex-row gap-3 md:gap-4 max-w-sm">

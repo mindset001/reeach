@@ -46,7 +46,7 @@ export default function ProblemSection() {
                 discounts for every participant whenever they need it.
               </p>
 
-              <p className="text-sm italic text-gray-600">
+              <p className="text-sm text-gray-600">
                 Doing business in Africa? Get Reeach.
               </p>
 

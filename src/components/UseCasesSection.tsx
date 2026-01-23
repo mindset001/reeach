@@ -65,7 +65,7 @@ export default function UseCasesSection() {
 
   return (
     <>
-      <section className="py-10 bg-white " id="use-cases">
+      <section className="py-4 bg-white " id="use-cases">
         {/* Header */}
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-8">
@@ -81,7 +81,7 @@ export default function UseCasesSection() {
       </section>
 
       {/* Tabs - Sticky - Outside section to work across all following sections */}
-      <div className="sticky top-[66px] z-40 bg-white py-4">
+      <div className="sticky top-[66px] z-40 bg-white">
         <div className="container mx-auto px-6">
           <div className="flex justify-center ">
             <div className="inline-flex border overflow-x-auto scrollbar-hide border-[#F1D0C2] rounded-[88px] p-2 min-w-full md:min-w-0">
