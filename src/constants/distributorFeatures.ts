@@ -4,7 +4,7 @@ export const DISTRIBUTOR_FEATURES = [
     title: "See real-time demand across your retail network.",
     description:
       "Know what's selling in each retailer. See what customers are searching for in each location. Understand regional preferences. Know when retailers need supply before they ask.",
-    image: "/images/dist1.png",
+    image: "/images/new/dist1.png",
     imagePosition: "right" as const,
   },
   {
@@ -12,7 +12,7 @@ export const DISTRIBUTOR_FEATURES = [
     title: "Connect with Reeach-vetted manufacturers.",
     description:
       "Find manufacturers whose products match market demand. Build supply relationships. Manage supply from multiple manufacturers. Track performance.",
-    image: "/images/dist2.png",
+    image: "/images/new/dist2.png",
     imagePosition: "left" as const,
   },
   {
@@ -20,7 +20,7 @@ export const DISTRIBUTOR_FEATURES = [
     title: "Optimize your supply chain.",
     description:
       "Supply retailers digitally—they see inventory instantly. Receive automatic supply prompts when inventory gets low. Route products efficiently. Reduce unnecessary logistics steps.",
-    image: "/images/dist3.png",
+    image: "/images/new/dist3.png",
     imagePosition: "right" as const,
   },
 

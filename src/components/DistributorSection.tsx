@@ -50,7 +50,7 @@ export default function DistributorSection({ onJoinWaitlist }: DistributorSectio
             {ADDITIONAL_DISTRIBUTOR_FEATURES.map((feature, index) => (
               <div
                 key={index}
-                className="bg-white rounded-[16px] p-6 shadow-sm hover:shadow-md transition-shadow border border-[#FFC5AA]"
+                className="bg-white rounded-[16px] p-6 shadow-sm hover:shadow-md transition-shadow border border-[#D9D9D9]"
               >
                 <div className="bg-[#F6F3F3] rounded-[12px] min-h-[200px] mb-4 flex items-center justify-center overflow-hidden relative">
                   <Image

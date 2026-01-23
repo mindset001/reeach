@@ -4,7 +4,7 @@ export const RETAILER_FEATURES = [
     title: "Be found by customers searching right now.",
     description:
       "Our AI catalogs your inventory and connects customers who want what you sell. Visibility without paying for ads.",
-    image: "/images/retail1.png",
+    image: "/images/new/retail1.png",
     imagePosition: "right" as const,
   },
   {
@@ -12,7 +12,7 @@ export const RETAILER_FEATURES = [
     title: "Accept payments seamlessly.",
     description:
       "Customers scan your QR code and buy directly through Reeach. Payment instantly in your account. Receipt automatically generated. Simple.",
-    image: "/images/retail2.png",
+    image: "/images/new/retail2.png",
     imagePosition: "left" as const,
   },
   {
@@ -20,7 +20,7 @@ export const RETAILER_FEATURES = [
     title: "Understand demand in real-time.",
     description:
       "See what products customers search for. See what they actually buy. Make inventory decisions based on real data, not guesses.",
-    image: "/images/retail3.png",
+    image: "/images/new/retail3.png",
     imagePosition: "right" as const,
   },
 

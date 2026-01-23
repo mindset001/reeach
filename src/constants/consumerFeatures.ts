@@ -4,7 +4,7 @@ export const CONSUMER_FEATURES = [
     title: "Find products in seconds, not hours",
     description:
       "AI-powered search that understands what you're looking for and where it's available. Real-time inventory. Multiple options. Your choice.",
-    image: "/images/cons1.png",
+    image: "/images/new/cons1.png",
     imagePosition: "right" as const,
   },
   {
@@ -12,7 +12,7 @@ export const CONSUMER_FEATURES = [
     title: "Buy without POS friction.",
     description:
       "Scan. Select. Pay. Receipt. No confusion. No lost receipts. No waiting. One seamless payment experience in every Reeach partner store.",
-    image: "/images/cons2.png",
+    image: "/images/new/cons2.png",
     imagePosition: "left" as const,
   },
   {
@@ -20,7 +20,7 @@ export const CONSUMER_FEATURES = [
     title: "Track everything you buy.",
     description:
       "Every transaction is recorded digitally. Your purchase history. Your preferences. Your spending. All at your fingertips. Good for budgeting, good for proof of purchase.",
-    image: "/images/cons3.png",
+    image: "/images/new/cons3.png",
     imagePosition: "right" as const,
   },
 

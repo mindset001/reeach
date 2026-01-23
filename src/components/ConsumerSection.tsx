@@ -51,7 +51,7 @@ export default function ConsumerSection({ onJoinWaitlist }: ConsumerSectionProps
             {ADDITIONAL_CONSUMER_FEATURES.map((feature, index) => (
               <div
                 key={index}
-                className="bg-white rounded-[16px] p-6 hover:shadow-md transition-shadow border border-[#FFC5AA]"
+                className="bg-white rounded-[16px] p-6 hover:shadow-md transition-shadow border border-[#D9D9D9]"
               >
                 <div className="bg-[#F6F3F3] rounded-[12px] min-h-[200px] mb-4 flex items-center justify-center overflow-hidden relative">
                   <Image
