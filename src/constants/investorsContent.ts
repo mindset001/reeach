@@ -1,7 +1,7 @@
 export const INVESTOR_TABS = [
-  { id: "opportunity", label: "The Opportunity" },
-  { id: "solution", label: "Our Solution" },
-  { id: "information", label: "More Information" },
+  { id: "opportunity", label: "The Opportunity", over: "The Opportunity |  Africa's Retail Infrastructure Gap" },
+  { id: "solution", label: "Our Solution", over: "Our Solution |  Africa's commerce end-to-end Operating System" },
+  { id: "information", label: "More Information", over: 'More Information' },
 ];
 
 export const OPPORTUNITY_SECTIONS = [

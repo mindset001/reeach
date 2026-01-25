@@ -85,14 +85,14 @@ export default function InvestorsRaising() {
 
       {/* Right Content Area */}
       <div className="space-y-4 order-1 md:order-2">
-        <div className="relative rounded-[16px] overflow-hidden min-h-[400px] bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center">
+        <div className="relative rounded-[16px] overflow-hidden min-h-[500px] bg-[#000000] flex items-start py-10">
           <div
-            className="absolute inset-0 bg-cover bg-center opacity-6"
+            className="absolute inset-0 bg-cover bg-center opacity-10"
             style={{
               backgroundImage: `url(${OPPORTUNITY_SLIDES[currentSlide].image})`,
             }}
           />
-          <div className="flex z-50 justify-center text-white py-6 mt-6">
+          <div className="flex z-50 justify-center text-white px-8">
             {/* Slide counter and nav in top-left */}
             <div className="w-1/5 hidden md:flex flex-col gap-3">
               <button
@@ -184,11 +184,11 @@ export default function InvestorsRaising() {
             }`}
           >
             {/* Static border always visible */}
-            <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#D9D9D9]" />
+            <div className="absolute left-0 top-5 bottom-0 w-[2px] h-[14px] bg-[#D9D9D9]" />
             
             {/* Animated progress border for active item */}
             {activeSection === index && (
-              <div className="absolute left-0 top-0 w-1 h-0 bg-[#E64D0B] animate-[fillDown_10s_linear_forwards]" />
+              <div className="absolute left-0 top-0 w-[2px] h-[20px] bg-[#E64D0B] animate-[fillDown_10s_linear_forwards]" />
             )}
             
             <h4 className={`text-[18px] font-[600] mb-2 transition-colors ${
@@ -207,7 +207,7 @@ export default function InvestorsRaising() {
 
       {/* Right Content Area */}
       <div className="space-y-4 order-1 md:order-2">
-        <div className="relative rounded-[16px] overflow-hidden min-h-[400px] bg-[#76210A] flex items-center justify-center">
+        <div className="relative rounded-[16px] overflow-hidden min-h-[500px] bg-[#76210A] flex  py-10">
           <div
             className="absolute inset-0 bg-cover bg-center opacity-10"
             style={{

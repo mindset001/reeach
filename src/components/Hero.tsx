@@ -34,7 +34,7 @@ export default function Hero() {
       <div className="container mx-auto px-6 py-40 md:py-40 relative z-10 w-full">
         <div className="grid md:grid-cols-2 gap-16 items-start">
           {/* Left Content */}
-          <div className="space-y-6 md:pt-16">
+          <div className="space-y-6 md:pt-28">
             <h1 className="text-[32px] md:text-[32px] lg:text-[44px] font-bold text-white leading-tight">
               Every product.
               <br />

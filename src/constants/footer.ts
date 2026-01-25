@@ -35,7 +35,7 @@ export const COMPANY_RESOURCES = [
 export const LEGAL_LINKS = [
   { label: "Privacy Policy", href: "#privacy" },
   { label: "Terms of Service", href: "#terms" },
-  { label: "Trademarks & Copyrights", href: "trademarks" },
+  { label: "Trademarks & Copyrights", href: "trademark" },
 ];
 
 export const ENQUIRIES = [

@@ -28,7 +28,7 @@ export const MANUFACTURER_FEATURES = [
     title: "Reduce production waste dramatically",
     description:
       "Accurate forecasting means less overstock, fewer stockouts, better margins. Align production with real demand.",
-    image: "/images/new/man4.png",
+    image: "/images/new/cadbury.png",
     imagePosition: "left" as const,
   },
 ];
@@ -42,12 +42,12 @@ export const ADDITIONAL_MANUFACTURER_FEATURES = [
   {
     title: "Micro-Market Reward-ability",
     description: "Don't just reward your best distributors, reward your best individual customers per region",
-    image: "/images/vaseline (2).png",
+    image: "/images/analysis (2).png",
   },
   {
     title: "Geography-based basket analysis",
     description: "See what your customers are buying as they buy your product.",
-    image: "/images/analysis (2).png",
+    image: "/images/vaseline (2).png",
   },
   // {
   //   title: "",

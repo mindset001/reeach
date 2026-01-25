@@ -17,15 +17,16 @@ export default function InvestorsHero() {
         }}
       />
       
-      <div className="container mx-auto px-6 py-32 md:py-20 relative z-10">
+      <div className="container mx-auto px-16 py-32 md:py-20 relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <div className="space-y-6 text-white">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              We're building Africa's commerce operating system.
+          <div className=" text-white  md:ml-[26px] md:mt-20">
+            <p className="text-[18px] mb-4">Reeach for Investors</p>
+            <h1 className="text-[24px] md:text-[36px] lg:text-[36px] mb-6 font-bold leading-tight">
+              We're building Africa's <br className="hidden md:block"/> commerce operating <br className="hidden md:block"/> system.
             </h1>
 
-            <p className="text-base md:text-lg leading-relaxed opacity-95">
+            <p className="text-base md:text-[18px] leading-relaxed opacity-95 mb-6">
               Reeach is reimagining retail in Africa, building the complete
               stack— End-to-end inventory tracking, discovery, payment, records,
               and supply chain intelligence— Using AI to make markets
@@ -39,10 +40,10 @@ export default function InvestorsHero() {
           </div>
 
           {/* Right Content - Puzzle Pieces Arrangement */}
-          <div className="flex justify-center md:justify-end">
+          <div className="hidden md:flex justify-center md:justify-end">
             <div className="relative w-full max-w-[600px] h-[400px] md:h-[500px]">
               {/* Top Left Puzzle Piece */}
-              <div className="absolute top-0 left-8 md:left-16 w-[65%] md:w-[50%] z-10">
+              <div className="absolute top-0 md:left-8 md:left-16 w-[65%] md:w-[50%] z-10">
                 <Image
                   src={One}
                   alt="Africa Commerce Market"
@@ -54,7 +55,7 @@ export default function InvestorsHero() {
               </div>
               
               {/* Bottom Right Puzzle Piece */}
-              <div className="absolute bottom-0 right-8 md:right-16 w-[65%] md:w-[50%]">
+              <div className="absolute bottom-0 md:right-8 md:right-16 w-[65%] md:w-[50%]">
                 <Image
                   src={Two}
                   alt="Africa Commerce Market"
@@ -65,6 +66,28 @@ export default function InvestorsHero() {
                 />
               </div>
             </div>
+          </div>
+          <div className="md:hidden flex justify-center md:justify-end">
+              <div>
+                   <Image
+                  src={One}
+                  alt="Africa Commerce Market"
+                  width={500}
+                  height={400}
+                  className="w-full h-auto object-contain"
+                  priority
+                />
+              </div>
+               <div>
+                   <Image
+                  src={Two}
+                  alt="Africa Commerce Market"
+                  width={500}
+                  height={400}
+                  className="w-full h-auto object-contain"
+                  priority
+                />
+              </div>
           </div>
         </div>
       </div>
