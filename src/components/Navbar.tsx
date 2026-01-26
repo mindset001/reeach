@@ -110,7 +110,7 @@ export default function Navbar({ variant = "default", onJoinWaitlist }: NavbarPr
                 alt="Reeach Logo"
                 width={100}
                 height={32}
-                className="h-6 w-auto"
+                className="h-4 w-auto"
               />
             </Link>
             <button

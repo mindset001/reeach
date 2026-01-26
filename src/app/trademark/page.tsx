@@ -1,9 +1,12 @@
 "use client";
 
+import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export default function TrademarkPage() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-white">
       <nav className="fixed top-0 h-[66px] left-0 right-0 z-50 bg-black">
@@ -15,7 +18,7 @@ export default function TrademarkPage() {
                 <img
                   src="/images/white-logo.png"
                   alt="Reeach Logo"
-                  className="h-8 w-auto"
+                  className="h-4 w-auto"
                 />
               </a>
 
@@ -36,15 +39,95 @@ export default function TrademarkPage() {
               </div>
             </div>
 
-            {/* CTA Button */}
-            <div className="hidden md:block">
-              <button className="px-6 py-2 rounded-full border border-white text-white hover:bg-white hover:text-black transition-colors text-sm">
+            <div className="flex items-center gap-4">
+              {/* CTA Button - Desktop */}
+              <button className="hidden md:block px-6 py-2 rounded-full border border-white text-white hover:bg-white hover:text-black transition-colors text-sm">
                 Be an early user
+              </button>
+
+              {/* Hamburger Menu Button - Mobile */}
+              <button
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                className="md:hidden w-[36px] h-[26px] flex items-center justify-center bg-white/10 rounded-[12px] hover:bg-white/20 transition-colors"
+                aria-label="Toggle menu"
+              >
+                <div className="w-5 flex flex-col gap-[2px]">
+                  <span className={`h-[2px] w-full bg-white rounded-full transition-all duration-300 ${isMenuOpen ? 'rotate-45 translate-y-[7px]' : ''}`} />
+                  <span className={`h-[2px] w-full bg-white rounded-full transition-all duration-300 ${isMenuOpen ? 'opacity-0' : ''}`} />
+                  <span className={`h-[2px] w-full bg-white rounded-full transition-all duration-300 ${isMenuOpen ? '-rotate-45 -translate-y-[7px]' : ''}`} />
+                </div>
               </button>
             </div>
           </div>
         </div>
       </nav>
+
+      {/* Mobile Menu Overlay */}
+      {isMenuOpen && (
+        <div className="md:hidden fixed inset-0 bg-white z-[100] overflow-y-auto">
+          {/* Header with Logo and Close Button */}
+          <div className="flex items-center justify-between px-6 py-4 border-b">
+            <a href="/" className="flex items-center gap-2" onClick={() => setIsMenuOpen(false)}>
+              <img
+                src="/images/logo.png"
+                alt="Reeach Logo"
+                className="h-6 w-auto"
+              />
+            </a>
+            <button
+              onClick={() => setIsMenuOpen(false)}
+              className="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-gray-100 transition-colors"
+              aria-label="Close menu"
+            >
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 5L5 15M5 5L15 15" stroke="#4A4A4A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </button>
+          </div>
+
+          {/* Navigation Links */}
+          <div className="flex flex-col px-6 py-6 pb-32">
+            <a
+              href="/"
+              onClick={() => setIsMenuOpen(false)}
+              className="text-[#5F6368] text-[15px] font-normal hover:text-[#FF5722] transition-colors py-3"
+            >
+              Use cases
+            </a>
+            <a
+              href="/how-it-works"
+              onClick={() => setIsMenuOpen(false)}
+              className="text-[#5F6368] text-[15px] font-normal hover:text-[#FF5722] transition-colors py-3"
+            >
+              How Reeach works
+            </a>
+            <a
+              href="/faqs"
+              onClick={() => setIsMenuOpen(false)}
+              className="text-[#5F6368] text-[15px] font-normal hover:text-[#FF5722] transition-colors py-3"
+            >
+              FAQs
+            </a>
+            <a
+              href="/investors"
+              onClick={() => setIsMenuOpen(false)}
+              className="text-[#5F6368] text-[15px] font-normal hover:text-[#FF5722] transition-colors py-3"
+            >
+              Investors
+            </a>
+          </div>
+
+          {/* Bottom Button */}
+          <div className="fixed bottom-0 left-0 right-0 px-6 py-8 bg-white border-t">
+            <button 
+              className="w-full bg-[#E64D0B] text-white rounded-[24px] py-3 font-semibold text-[16px] hover:bg-[#E64A19] transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Be an early user
+            </button>
+          </div>
+        </div>
+      )}
       
       <main className="container mx-auto px-6 py-20 pt-32">{/* Added pt-32 for navbar spacing */}
         <div className="max-w-4xl mx-auto">

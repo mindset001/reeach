@@ -14,7 +14,7 @@ interface DistributorSectionProps {
 export default function DistributorSection({ onJoinWaitlist }: DistributorSectionProps) {
 
   return (
-    <section className="py-20 bg-gray-50" id="distributor-section">
+    <section className="py-20 bg-[#fff]" id="distributor-section">
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -41,7 +41,7 @@ export default function DistributorSection({ onJoinWaitlist }: DistributorSectio
         </div>
 
         {/* Additional Features */}
-        <div className="rounded-3xl md:p-8 md:p-12">
+        <div className=" md:p-8 md:p-12 bg-[#F6F7F6B2]">
           <h3 className="text-2xl md:text-center md:text-[28px] font-semibold text-[#585757] mb-8">
             There's more for distributors
           </h3>

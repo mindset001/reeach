@@ -32,7 +32,7 @@ export default function ManufacturerSection({ onJoinWaitlist }: ManufacturerSect
   };
 
   return (
-    <section className="py-20 bg-[#F9F9F9]" id="manufacturer-section">
+    <section className="py-20 bg-[#fff]" id="manufacturer-section">
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -61,7 +61,7 @@ export default function ManufacturerSection({ onJoinWaitlist }: ManufacturerSect
         </div>
 
         {/* Additional Features */}
-        <div className=" rounded-3xl md:p-8 md:p-12">
+        <div className="bg-[#F6F7F6B2] rounded-3xl md:p-8 md:p-12">
           <h3 className="text-2xl md:text-center md:text-[28px] font-semibold text-[#585757] mb-8">
             There's more for manufacturers
           </h3>
