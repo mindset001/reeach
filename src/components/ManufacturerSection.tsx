@@ -36,12 +36,12 @@ export default function ManufacturerSection({ onJoinWaitlist }: ManufacturerSect
       <div className="container mx-auto ">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 px-6">
-          <h2 className="text-[28px] md:text-[28px]font-bold text-gray-900 mb-4">
+          <h2 className="text-[22px] md:text-[28px]font-bold text-gray-900 mb-4">
             Reeach for Manufacturers
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-[14px] md:text-[16px] text-gray-600">
             Know where your products are. How they're selling. What customers
-            actually want.<br className="hidden md:block"/> In real time.
+            actually want.<br className="font-[700] text-[#000]"/> In real time.
           </p>
         </div>
 

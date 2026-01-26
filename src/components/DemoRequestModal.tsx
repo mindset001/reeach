@@ -197,7 +197,7 @@ export default function DemoRequestModal({ isOpen, onClose, userType }: DemoRequ
                             </div>
 
                             <div>
-                                <label className="block text-sm text-[#5F6368] mb-2">What feature are you most excited about*</label>
+                                <label className="block text-sm text-[#5F6368] mb-2">What feature are you most excited about?*</label>
                                 <select
                                     value={excitedFeature}
                                     onChange={(e) => setExcitedFeature(e.target.value)}
@@ -228,9 +228,10 @@ export default function DemoRequestModal({ isOpen, onClose, userType }: DemoRequ
                             </div>
 
                             <div>
-                                <label className="block text-sm text-[#5F6368] mb-2">When would you like to have a meeting</label>
+                                <label className="block text-sm text-[#5F6368] mb-2">When would you like to have a meeting?</label>
                                 <input
                                     type="datetime-local"
+                                    placeholder="Select a date"
                                     value={meetingTime}
                                     onChange={(e) => setMeetingTime(e.target.value)}
                                     className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm text-[#454545] focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent"
@@ -241,7 +242,7 @@ export default function DemoRequestModal({ isOpen, onClose, userType }: DemoRequ
                                 type="submit"
                                 className="w-full py-3 bg-[#E64D0B] text-white font-semibold rounded-[4px] hover:bg-[#E64A19] transition-colors mt-6"
                             >
-                                Request demo
+                               Send request
                             </button>
                         </form>
                     </div>

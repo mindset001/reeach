@@ -17,7 +17,7 @@ export default function InvestorsHero() {
         }}
       />
       
-      <div className="container mx-auto px-16 py-32 md:py-20 relative z-10">
+      <div className="container mx-auto px-6 md:px-16 py-32 md:py-20 relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className=" text-white  md:ml-[26px] md:mt-20">
@@ -26,14 +26,14 @@ export default function InvestorsHero() {
               We're building Africa's <br className="hidden md:block"/> commerce operating <br className="hidden md:block"/> system.
             </h1>
 
-            <p className="text-base md:text-[18px] leading-relaxed opacity-95 mb-6">
+            <p className="text-[16px] md:text-[18px] leading-relaxed opacity-95 mb-6">
               Reeach is reimagining retail in Africa, building the complete
               stack— End-to-end inventory tracking, discovery, payment, records,
               and supply chain intelligence— Using AI to make markets
               intelligible, transactions frictionless, and supply chains visible.
             </p>
 
-            <p className="text-base md:text-lg leading-relaxed opacity-95">
+            <p className="text-[16px] md:text-[18px] leading-relaxed opacity-95">
               We're raising pre-seed to set out in Nigeria but with our sights
               on the rest of Africa and other emerging countries.
             </p>

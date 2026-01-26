@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function ProblemSection() {
   return (
-    <section className="py-20 bg-[#fff]">
+    <section className="py-10 bg-[#fff]">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left - Image */}
@@ -29,13 +29,13 @@ export default function ProblemSection() {
             </div>
 
             <div className="space-y-4 text-[#5F6368]">
-              <p className="leading-relaxed text-[16px]">
+              <p className="leading-relaxed text-[14px] md:text-[16px]">
                 Consumers can't find what they need. Retailers have inventory
                 nobody knows about. Manufacturers don't know where their
                 products are or how they're performing.
               </p>
 
-              <p className="leading-relaxed text-[16px]">
+              <p className="leading-relaxed text-[14px] md:text-[16px]">
                 Reeach solves this by becoming Africa's commerce operating
                 system. By connecting manufacturers, distributors, retailers,
                 products and services together in one ecosystem and unleashing
