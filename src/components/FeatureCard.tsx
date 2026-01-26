@@ -28,7 +28,7 @@ export default function FeatureCard({
       {/* Text Content */}
       <div className={`space-y-8 ${isImageRight ? "order-2 md:order-1" : "order-2 md:col-start-2 md:pl-20"}`}>
         <div className="md:w-[75%]">
-          <h3 className="text-2xl md:text-[28px] font-semibold text-[#000000]">
+          <h3 className="text-[22px] md:text-[28px] font-semibold text-[#000000]">
             {title}
           </h3>
         </div>

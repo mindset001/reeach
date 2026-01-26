@@ -15,10 +15,10 @@ export default function ConsumerSection({ onJoinWaitlist }: ConsumerSectionProps
 
   return (
     <section className="py-20 bg-[#fff]" id="consumer-section">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-[22px] md:text-4xl font-bold text-gray-900 mb-4">
             Reeach for Consumers
           </h2>
           <p className="text-lg text-gray-600">
@@ -28,7 +28,7 @@ export default function ConsumerSection({ onJoinWaitlist }: ConsumerSectionProps
         </div>
 
         {/* Main Features */}
-        <div className="space-y-20 mb-20">
+        <div className="space-y-20 mb-20 md:px-20 px-10">
           {CONSUMER_FEATURES.map((feature) => (
             <FeatureCard
               key={feature.id}
@@ -42,7 +42,7 @@ export default function ConsumerSection({ onJoinWaitlist }: ConsumerSectionProps
         </div>
 
         {/* Additional Features */}
-        <div className=" md:p-8 md:p-12 bg-[#F6F7F6B2]">
+        <div className=" p-8 md:p-20 bg-[#F6F7F6B2]">
           <h3 className="text-2xl md:text-center md:text-[28px] font-semibold text-[#585757] mb-8">
             There's more for consumers
           </h3>

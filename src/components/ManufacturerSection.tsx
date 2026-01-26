@@ -33,9 +33,9 @@ export default function ManufacturerSection({ onJoinWaitlist }: ManufacturerSect
 
   return (
     <section className="py-20 bg-[#fff]" id="manufacturer-section">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto ">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-16 px-6">
           <h2 className="text-[28px] md:text-[28px]font-bold text-gray-900 mb-4">
             Reeach for Manufacturers
           </h2>
@@ -46,7 +46,7 @@ export default function ManufacturerSection({ onJoinWaitlist }: ManufacturerSect
         </div>
 
         {/* Main Features */}
-        <div className="space-y-20 mb-20">
+        <div className="space-y-20 mb-20 md:px-20 px-8">
           {MANUFACTURER_FEATURES.map((feature) => (
             <FeatureCard
               key={feature.id}
@@ -61,7 +61,7 @@ export default function ManufacturerSection({ onJoinWaitlist }: ManufacturerSect
         </div>
 
         {/* Additional Features */}
-        <div className="bg-[#F6F7F6B2] rounded-3xl md:p-8 md:p-12">
+        <div className="bg-[#F6F7F6B2]  p-8 md:p-20">
           <h3 className="text-2xl md:text-center md:text-[28px] font-semibold text-[#585757] mb-8">
             There's more for manufacturers
           </h3>
