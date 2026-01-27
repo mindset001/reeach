@@ -77,7 +77,7 @@ export default function Footer({ onJoinWaitlist }: FooterProps) {
         </div>
 
         {/* Main Footer Columns */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12 border-t border-[#FFC5AA] pt-10">
           {FOOTER_COLUMNS.map((column) => (
             <div key={column.title} className="space-y-4">
               <h3 className="font-bold text-gray-900 text-lg">

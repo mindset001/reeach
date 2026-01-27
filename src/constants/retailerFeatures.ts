@@ -17,9 +17,9 @@ export const RETAILER_FEATURES = [
   },
   {
     id: "pricing",
-    title: "Understand demand in real-time.",
+    title: "Build loan-qualifying sales records.",
     description:
-      "See what products customers search for. See what they actually buy. Make inventory decisions based on real data, not guesses.",
+      " Digital, verified transaction records. Banks recognize Reeach records.Better access to credit. Growth becomes possible.",
     image: "/images/new/retail3.png",
     imagePosition: "right" as const,
   },

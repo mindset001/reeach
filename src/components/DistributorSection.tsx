@@ -8,7 +8,7 @@ import {
 } from "@/constants/distributorFeatures";
 
 interface DistributorSectionProps {
-  onJoinWaitlist?: () => void;
+  onJoinWaitlist?: (userType?: string) => void;
 }
 
 export default function DistributorSection({ onJoinWaitlist }: DistributorSectionProps) {
@@ -46,7 +46,7 @@ export default function DistributorSection({ onJoinWaitlist }: DistributorSectio
             There's more for distributors
           </h3>
 
-          <div className="grid md:grid-cols-3 gap-6 mb-8">
+          <div className="grid md:grid-cols-3 gap-12 mb-8">
             {ADDITIONAL_DISTRIBUTOR_FEATURES.map((feature, index) => (
               <div
                 key={index}
@@ -80,9 +80,9 @@ export default function DistributorSection({ onJoinWaitlist }: DistributorSectio
             </p>
           </div>
 
-          <div className="text-center">
+          <div className="text-center flex">
             <button
-              onClick={onJoinWaitlist}
+              onClick={() => onJoinWaitlist?.("distributor")}
               className="bg-[#E64D0B] text-white px-6 py-3 rounded-full font-[500] text-[16px] hover:bg-orange-700 transition-colors"
             >
               Be an early user

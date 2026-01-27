@@ -1,29 +1,36 @@
 export const DISTRIBUTOR_FEATURES = [
   {
     id: "connections",
-    title: "See real-time demand across your retail network.",
-    description:
-      "Know what's selling in each retailer. See what customers are searching for in each location. Understand regional preferences. Know when retailers need supply before they ask.",
-    image: "/images/new/dist1.png",
-    imagePosition: "right" as const,
-  },
-  {
-    id: "orders",
     title: "Connect with Reeach-vetted manufacturers.",
     description:
       "Find manufacturers whose products match market demand. Build supply relationships. Manage supply from multiple manufacturers. Track performance.",
-    image: "/images/new/dist2.png",
-    imagePosition: "left" as const,
+    image: "/images/new/dist1.png",
+    imagePosition: "right" as const,
   },
   {
     id: "inventory",
     title: "Optimize your supply chain.",
     description:
       "Supply retailers digitally—they see inventory instantly. Receive automatic supply prompts when inventory gets low. Route products efficiently. Reduce unnecessary logistics steps.",
-    image: "/images/new/dist3.png",
+    image: "/images/new/dist2.png",
+    imagePosition: "left" as const,
+  },
+  {
+    id: "intelligence",
+    title: "Real-time market demand intelligence.",
+    description:
+      "Stop relying on retailer orders. See actual customer searches, purchases, and preferences. Data-driven forecasting replaces guesswork.",
+    image: "/images/new/man3.png",
     imagePosition: "right" as const,
   },
-
+  {
+    id: "orders",
+    title: "Supply with intelligent certainty.",
+    description:
+      "Instead of guessing, use real demand data. Know what to stock, where to stock it. Know which locations need supply. Plan inventory strategically.",
+    image: "/images/new/dist3.png",
+    imagePosition: "left" as const,
+  },
 ];
 
 export const ADDITIONAL_DISTRIBUTOR_FEATURES = [

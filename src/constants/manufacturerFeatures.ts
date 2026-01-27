@@ -7,22 +7,7 @@ export const MANUFACTURER_FEATURES = [
     image: "/images/new/man1.png",
     imagePosition: "right" as const,
   },
-  {
-    id: "intelligence",
-    title: "Real market demand intelligence",
-    description:
-      "Stop relying on retailer orders. See actual customer searches, purchases, and preferences. Data-driven forecasting replaces guesswork.",
-    image: "/images/new/man3.png",
-    imagePosition: "left" as const,
-  },
-  {
-    id: "distributors",
-    title: "Discover and manage new distributors",
-    description:
-      "Find Reeach-vetted distributors. Build relationships. Mirror supply digitally. Track performance. Expand distribution systematically.",
-    image: "/images/new/man2.png",
-    imagePosition: "right" as const,
-  },
+
   {
     id: "waste",
     title: "Reduce production waste dramatically",
@@ -30,6 +15,15 @@ export const MANUFACTURER_FEATURES = [
       "Accurate forecasting means less overstock, fewer stockouts, better margins. Align production with real demand.",
     image: "/images/new/cadbury.png",
     imagePosition: "left" as const,
+  },
+
+  {
+    id: "distributors",
+    title: "Discover and manage new distributors",
+    description:
+      "Find Reeach-vetted distributors. Build relationships. Mirror supply digitally. Track performance. Expand distribution systematically.",
+    image: "/images/new/man2.png",
+    imagePosition: "right" as const,
   },
 ];
 

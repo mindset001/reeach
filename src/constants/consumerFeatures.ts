@@ -17,9 +17,9 @@ export const CONSUMER_FEATURES = [
   },
   {
     id: "availability",
-    title: "Track everything you buy.",
+    title: "Harmonized, superior buying ",
     description:
-      "Every transaction is recorded digitally. Your purchase history. Your preferences. Your spending. All at your fingertips. Good for budgeting, good for proof of purchase.",
+      "One payment method. One receipt system. One place to find and buy. We've simplified shopping for products or services. Consumers using Reeach take charge of their entire commerce experience from one app.",
     image: "/images/new/cons3.png",
     imagePosition: "right" as const,
   },

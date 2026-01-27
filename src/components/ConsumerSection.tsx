@@ -8,7 +8,7 @@ import {
 } from "@/constants/consumerFeatures";
 
 interface ConsumerSectionProps {
-  onJoinWaitlist?: () => void;
+  onJoinWaitlist?: (userType?: string) => void;
 }
 
 export default function ConsumerSection({ onJoinWaitlist }: ConsumerSectionProps) {
@@ -22,8 +22,7 @@ export default function ConsumerSection({ onJoinWaitlist }: ConsumerSectionProps
             Reeach for Consumers
           </h2>
           <p className="text-lg text-gray-600">
-            Shop smarter. Save time. Save money. Find anything you need from
-            verified stores near you.
+           Be in charge of all your shopping concerns. One app. Total control.
           </p>
         </div>
 
@@ -47,7 +46,7 @@ export default function ConsumerSection({ onJoinWaitlist }: ConsumerSectionProps
             There's more for consumers
           </h3>
 
-          <div className="grid md:grid-cols-3 gap-6 mb-8">
+          <div className="grid md:grid-cols-3 gap-12 mb-8">
             {ADDITIONAL_CONSUMER_FEATURES.map((feature, index) => (
               <div
                 key={index}
@@ -81,7 +80,7 @@ export default function ConsumerSection({ onJoinWaitlist }: ConsumerSectionProps
 
           <div className="text-left mt-6">
             <button
-              onClick={onJoinWaitlist}
+              onClick={() => onJoinWaitlist?.("consumer")}
               className="bg-[#E64D0B] text-white px-6 py-3 rounded-full font-[500] text-[16px] hover:bg-orange-700 transition-colors"
             >
               Be an early user

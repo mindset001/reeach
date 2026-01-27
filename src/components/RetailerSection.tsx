@@ -8,7 +8,7 @@ import {
 } from "@/constants/retailerFeatures";
 
 interface RetailerSectionProps {
-  onJoinWaitlist?: () => void;
+  onJoinWaitlist?: (userType?: string) => void;
 }
 
 export default function RetailerSection({ onJoinWaitlist }: RetailerSectionProps) {
@@ -46,7 +46,7 @@ export default function RetailerSection({ onJoinWaitlist }: RetailerSectionProps
             There's more for retailers
           </h3>
 
-          <div className="grid md:grid-cols-3 gap-6 mb-8">
+          <div className="grid md:grid-cols-3 gap-12 mb-8">
             {ADDITIONAL_RETAILER_FEATURES.map((feature, index) => (
               <div
                 key={index}
@@ -80,7 +80,7 @@ export default function RetailerSection({ onJoinWaitlist }: RetailerSectionProps
 
           <div className="text-left mt-6">
             <button
-              onClick={onJoinWaitlist}
+              onClick={() => onJoinWaitlist?.("retailer")}
               className="bg-[#E64D0B] text-white px-6 py-3 rounded-full font-[500] text-[16px] hover:bg-orange-700 transition-colors"
             >
               Be an early user

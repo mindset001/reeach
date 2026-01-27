@@ -10,7 +10,7 @@ import {
 } from "@/constants/manufacturerFeatures";
 
 interface ManufacturerSectionProps {
-  onJoinWaitlist?: () => void;
+  onJoinWaitlist?: (userType?: string) => void;
 }
 
 export default function ManufacturerSection({ onJoinWaitlist }: ManufacturerSectionProps) {
@@ -66,8 +66,8 @@ export default function ManufacturerSection({ onJoinWaitlist }: ManufacturerSect
             There's more for manufacturers
           </h3>
 
-          <div className="flex flex-col-reverse md:flex-row gap-4 md:gap-8">
-            <div className="md:w-[30%] space-y-4 order-2 md:order-1">
+          <div className="flex flex-col md:flex-row gap-4 md:gap-8">
+            <div className="md:w-[30%] space-y-4">
               {ADDITIONAL_MANUFACTURER_FEATURES.map((feature, index) => (
                 <button
                   key={index}
@@ -83,7 +83,7 @@ export default function ManufacturerSection({ onJoinWaitlist }: ManufacturerSect
                   
                   {/* Animated progress border for active item */}
                   {activeFeature === index && (
-                    <div className="absolute left-0  w-[2px] h-[2px] bg-[#E64D0B] animate-[fillDown_5s_linear_forwards]" />
+                    <div className="absolute left-0  w-[2px] h-[2px] bg-[#E64D0B] animate-[fillDown_10s_linear_forwards]" />
                   )}
                   
                   <h4 className={`text-[18px] font-[600] mb-2 transition-colors ${
@@ -99,14 +99,14 @@ export default function ManufacturerSection({ onJoinWaitlist }: ManufacturerSect
                   <p className="text-[#5F6368] text-[16px]">See other unique features for manufacturers • <span className="text-[#E64D0B] cursor-pointer hover:underline" onClick={() => setIsDemoModalOpen(true)}>Request a demo / presentation</span></p>
             </div>
 
-            <div className="md:w-[70%] flex items-center justify-center rounded-[16px] min-h-[300px] p-8 order-1 md:order-2 overflow-hidden">
+            <div className="md:w-[70%] flex items-center justify-center rounded-[16px] min-h-[300px] p-8 overflow-hidden">
               {ADDITIONAL_MANUFACTURER_FEATURES[activeFeature].image && (
                 <Image
                   src={ADDITIONAL_MANUFACTURER_FEATURES[activeFeature].image}
                   alt={ADDITIONAL_MANUFACTURER_FEATURES[activeFeature].title}
                   width={500}
                   height={300}
-                  className="object-contain w-full h-full"
+                  className="w-[70%] h-auto object-contain"
                 />
               )}
               {!ADDITIONAL_MANUFACTURER_FEATURES[activeFeature].image && (
@@ -122,15 +122,12 @@ export default function ManufacturerSection({ onJoinWaitlist }: ManufacturerSect
             </div>
           </div>
 
-          <div className="flex gap-4 mt-8">
-            <button 
-              onClick={onJoinWaitlist}
-              className="text-[#E64D0B] font-regular text-[16px] hover:text-orange-700 transition-colors"
+         <div className="text-center flex mt-6">
+            <button
+              onClick={() => onJoinWaitlist?.("manufacturer")}
+              className="bg-[#E64D0B] text-white px-6 py-3 rounded-full font-[500] text-[16px] hover:bg-orange-700 transition-colors"
             >
-              Join waitlist
-            </button>
-            <button className="text-[#E64D0B] font-regular text-[16px] hover:text-gray-700 transition-colors">
-              How it all works
+              Be an early user
             </button>
           </div>
         </div>

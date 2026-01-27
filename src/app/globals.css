@@ -92,14 +92,20 @@ body {
 /* Input text and placeholder colors */
 input[type="text"],
 input[type="email"],
-input[type="tel"] {
-  color: #333333;
+input[type="tel"],
+input[type="datetime-local"],
+textarea,
+select {
+  color: #333333 !important;
 }
 
 input[type="text"]::placeholder,
 input[type="email"]::placeholder,
-input[type="tel"]::placeholder {
-  color: #333333;
+input[type="tel"]::placeholder,
+input[type="datetime-local"]::placeholder,
+textarea::placeholder {
+  color: #999999 !important;
+  opacity: 0.7;
 }
 
 /* Progress loader animation for feature borders */

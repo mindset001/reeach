@@ -785,8 +785,8 @@ export default function WaitlistModal({ isOpen, onClose, initialUserType }: Wait
                                                 type="text"
                                                 value={businessName}
                                                 onChange={(e) => setBusinessName(e.target.value)}
-                                                placeholder="E.g. Tunde Abdul"
-                                                className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent"
+                                                placeholder="e.g. Tunde Abdul"
+                                                className="w-full px-4 py-3 border text-[#fff] border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent"
                                                 required
                                             />
                                         </div>
@@ -883,7 +883,7 @@ export default function WaitlistModal({ isOpen, onClose, initialUserType }: Wait
                                                 type="text"
                                                 value={primaryContact}
                                                 onChange={(e) => setPrimaryContact(e.target.value)}
-                                                placeholder="E.g. Tunde Abdul"
+                                                placeholder="e.g. Tunde Abdul"
                                                 className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent"
                                                 required
                                             />
@@ -895,7 +895,7 @@ export default function WaitlistModal({ isOpen, onClose, initialUserType }: Wait
                                                 type="email"
                                                 value={email}
                                                 onChange={(e) => setEmail(e.target.value)}
-                                                placeholder="E.g. tunde@gmail.com"
+                                                placeholder="e.g. tunde@gmail.com"
                                                 className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent"
                                                 required
                                             />
@@ -907,7 +907,7 @@ export default function WaitlistModal({ isOpen, onClose, initialUserType }: Wait
                                                 type="tel"
                                                 value={phone}
                                                 onChange={(e) => setPhone(e.target.value)}
-                                                placeholder="+080..."
+                                                placeholder="080..."
                                                 className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent"
                                             />
                                         </div>
