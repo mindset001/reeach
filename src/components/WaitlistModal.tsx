@@ -250,7 +250,7 @@ export default function WaitlistModal({ isOpen, onClose, initialUserType }: Wait
                                                 value={fullName}
                                                 onChange={(e) => setFullName(e.target.value)}
                                                 placeholder="e.g. Tunde Abdul"
-                                                className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent"
+                                                className="w-full px-4 py-3 border border-gray-300 rounded-[1px] text-sm focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent"
                                                 required
                                             />
                                         </div>
@@ -262,7 +262,7 @@ export default function WaitlistModal({ isOpen, onClose, initialUserType }: Wait
                                                 value={email}
                                                 onChange={(e) => setEmail(e.target.value)}
                                                 placeholder="e.g. tunde@gmail.com"
-                                                className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent"
+                                                className="w-full px-4 py-3 border border-gray-300 rounded-[1px] text-sm focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent"
                                                 required
                                             />
                                         </div>
@@ -274,7 +274,7 @@ export default function WaitlistModal({ isOpen, onClose, initialUserType }: Wait
                                                 value={phone}
                                                 onChange={(e) => setPhone(e.target.value)}
                                                 placeholder="+080..."
-                                                className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent"
+                                                className="w-full px-4 py-3 border border-gray-300 rounded-[1px] text-sm focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent"
                                             />
                                         </div>
 
@@ -284,7 +284,7 @@ export default function WaitlistModal({ isOpen, onClose, initialUserType }: Wait
                                                 <button
                                                     type="button"
                                                     onClick={() => setFeatureDropdownOpen(!featureDropdownOpen)}
-                                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm text-[#454545] hover:bg-[#FFF6F2] focus:bg-[#FFF6F2] focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent text-left flex justify-between items-center"
+                                                    className="w-full px-4 py-3 border border-gray-300 rounded-[1px] text-sm text-[#454545] hover:bg-[#FFF6F2] focus:bg-[#FFF6F2] focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent text-left flex justify-between items-center"
                                                 >
                                                     <span className={excitedFeature.length === 0 ? "text-gray-400" : ""}>
                                                         {excitedFeature.length === 0 ? "Select features" : `${excitedFeature.length} selected`}
@@ -294,7 +294,7 @@ export default function WaitlistModal({ isOpen, onClose, initialUserType }: Wait
                                                     </svg>
                                                 </button>
                                                 {featureDropdownOpen && (
-                                                    <div className="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-lg shadow-lg max-h-60 overflow-y-auto">
+                                                    <div className="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-[1px] shadow-lg max-h-60 overflow-y-auto">
                                                         <label className="flex items-center px-4 py-2 hover:bg-[#FFF6F2] cursor-pointer">
                                                             <input
                                                                 type="checkbox"
@@ -359,7 +359,7 @@ export default function WaitlistModal({ isOpen, onClose, initialUserType }: Wait
                                             <select
                                                 value={location}
                                                 onChange={(e) => setLocation(e.target.value)}
-                                                className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm text-[#454545] hover:bg-[#FFF6F2] focus:bg-[#FFF6F2] focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent appearance-none bg-[url('data:image/svg+xml;charset=UTF-8,%3csvg%20width%3D%2212%22%20height%3D%228%22%20viewBox%3D%220%200%2012%208%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3cpath%20d%3D%22M1%201.5L6%206.5L11%201.5%22%20stroke%3D%22%234A4A4A%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3c%2Fsvg%3E')] bg-[length:12px_8px] bg-[position:calc(100%-16px)_center] bg-no-repeat"
+                                                className="w-full px-4 py-3 border border-gray-300 rounded-[1px] text-sm text-[#454545] hover:bg-[#FFF6F2] focus:bg-[#FFF6F2] focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent appearance-none bg-[url('data:image/svg+xml;charset=UTF-8,%3csvg%20width%3D%2212%22%20height%3D%228%22%20viewBox%3D%220%200%2012%208%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3cpath%20d%3D%22M1%201.5L6%206.5L11%201.5%22%20stroke%3D%22%234A4A4A%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3c%2Fsvg%3E')] bg-[length:12px_8px] bg-[position:calc(100%-16px)_center] bg-no-repeat"
                                                 required
                                             >
                                                 <option value="">Select your current location</option>
@@ -416,7 +416,7 @@ export default function WaitlistModal({ isOpen, onClose, initialUserType }: Wait
                                                 value={businessName}
                                                 onChange={(e) => setBusinessName(e.target.value)}
                                                 placeholder="e.g. Tunde Abdul"
-                                                className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent"
+                                                className="w-full px-4 py-3 border border-gray-300 rounded-[1px] text-sm focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent"
                                                 required
                                             />
                                         </div>
@@ -427,7 +427,7 @@ export default function WaitlistModal({ isOpen, onClose, initialUserType }: Wait
                                                 <button
                                                     type="button"
                                                     onClick={() => setCategoryDropdownOpen(!categoryDropdownOpen)}
-                                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm text-[#454545] hover:bg-[#FFF6F2] focus:bg-[#FFF6F2] focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent text-left flex justify-between items-center"
+                                                    className="w-full px-4 py-3 border border-gray-300 rounded-[1px] text-sm text-[#454545] hover:bg-[#FFF6F2] focus:bg-[#FFF6F2] focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent text-left flex justify-between items-center"
                                                 >
                                                     <span className={category.length === 0 ? "text-gray-400" : ""}>
                                                         {category.length === 0 ? "Select categories" : `${category.length} selected`}
@@ -437,7 +437,7 @@ export default function WaitlistModal({ isOpen, onClose, initialUserType }: Wait
                                                     </svg>
                                                 </button>
                                                 {categoryDropdownOpen && (
-                                                    <div className="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-lg shadow-lg max-h-60 overflow-y-auto">
+                                                    <div className="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-[1px] shadow-lg max-h-60 overflow-y-auto">
                                                         {categoryOptions.map((option) => (
                                                             <label
                                                                 key={option.value}
@@ -462,7 +462,7 @@ export default function WaitlistModal({ isOpen, onClose, initialUserType }: Wait
                                             <select
                                                 value={outlets}
                                                 onChange={(e) => setOutlets(e.target.value)}
-                                                className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm text-[#454545] hover:bg-[#FFF6F2] focus:bg-[#FFF6F2] focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent appearance-none bg-[url('data:image/svg+xml;charset=UTF-8,%3csvg%20width%3D%2212%22%20height%3D%228%22%20viewBox%3D%220%200%2012%208%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3cpath%20d%3D%22M1%201.5L6%206.5L11%201.5%22%20stroke%3D%22%234A4A4A%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3c%2Fsvg%3E')] bg-[length:12px_8px] bg-[position:calc(100%-16px)_center] bg-no-repeat"
+                                                className="w-full px-4 py-3 border border-gray-300 rounded-[1px] text-sm text-[#454545] hover:bg-[#FFF6F2] focus:bg-[#FFF6F2] focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent appearance-none bg-[url('data:image/svg+xml;charset=UTF-8,%3csvg%20width%3D%2212%22%20height%3D%228%22%20viewBox%3D%220%200%2012%208%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3cpath%20d%3D%22M1%201.5L6%206.5L11%201.5%22%20stroke%3D%22%234A4A4A%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3c%2Fsvg%3E')] bg-[length:12px_8px] bg-[position:calc(100%-16px)_center] bg-no-repeat"
                                             >
                                                 <option value="">Select</option>
                                                 <option value="0">0 (No shop)</option>
@@ -479,7 +479,7 @@ export default function WaitlistModal({ isOpen, onClose, initialUserType }: Wait
                                             <select
                                                 value={location}
                                                 onChange={(e) => setLocation(e.target.value)}
-                                                className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm text-[#454545] hover:bg-[#FFF6F2] focus:bg-[#FFF6F2] focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent appearance-none bg-[url('data:image/svg+xml;charset=UTF-8,%3csvg%20width%3D%2212%22%20height%3D%228%22%20viewBox%3D%220%200%2012%208%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3cpath%20d%3D%22M1%201.5L6%206.5L11%201.5%22%20stroke%3D%22%234A4A4A%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3c%2Fsvg%3E')] bg-[length:12px_8px] bg-[position:calc(100%-16px)_center] bg-no-repeat"
+                                                className="w-full px-4 py-3 border border-gray-300 rounded-[1px] text-sm text-[#454545] hover:bg-[#FFF6F2] focus:bg-[#FFF6F2] focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent appearance-none bg-[url('data:image/svg+xml;charset=UTF-8,%3csvg%20width%3D%2212%22%20height%3D%228%22%20viewBox%3D%220%200%2012%208%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3cpath%20d%3D%22M1%201.5L6%206.5L11%201.5%22%20stroke%3D%22%234A4A4A%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3c%2Fsvg%3E')] bg-[length:12px_8px] bg-[position:calc(100%-16px)_center] bg-no-repeat"
                                             >
                                                 <option value="">Select your current location</option>
                                                 <option value="outside-nigeria">Outside Nigeria</option>
@@ -531,7 +531,7 @@ export default function WaitlistModal({ isOpen, onClose, initialUserType }: Wait
                                                 value={email}
                                                 onChange={(e) => setEmail(e.target.value)}
                                                 placeholder="e.g. tunde@gmail.com"
-                                                className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent"
+                                                className="w-full px-4 py-3 border border-gray-300 rounded-[1px] text-sm focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent"
                                                 required
                                             />
                                         </div>
@@ -543,7 +543,7 @@ export default function WaitlistModal({ isOpen, onClose, initialUserType }: Wait
                                                 value={phone}
                                                 onChange={(e) => setPhone(e.target.value)}
                                                 placeholder="+080..."
-                                                className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent"
+                                                className="w-full px-4 py-3 border border-gray-300 rounded-[1px] text-sm focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent"
                                             />
                                         </div>
 
@@ -553,7 +553,7 @@ export default function WaitlistModal({ isOpen, onClose, initialUserType }: Wait
                                                 <button
                                                     type="button"
                                                     onClick={() => setFeatureDropdownOpen(!featureDropdownOpen)}
-                                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm text-[#454545] hover:bg-[#FFF6F2] focus:bg-[#FFF6F2] focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent text-left flex justify-between items-center"
+                                                    className="w-full px-4 py-3 border border-gray-300 rounded-[1px] text-sm text-[#454545] hover:bg-[#FFF6F2] focus:bg-[#FFF6F2] focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent text-left flex justify-between items-center"
                                                 >
                                                     <span className={excitedFeature.length === 0 ? "text-gray-400" : ""}>
                                                         {excitedFeature.length === 0 ? "Select features" : `${excitedFeature.length} selected`}
@@ -563,7 +563,7 @@ export default function WaitlistModal({ isOpen, onClose, initialUserType }: Wait
                                                     </svg>
                                                 </button>
                                                 {featureDropdownOpen && (
-                                                    <div className="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-lg shadow-lg max-h-60 overflow-y-auto">
+                                                    <div className="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-[1px] shadow-lg max-h-60 overflow-y-auto">
                                                         {retailerFeatureOptions.map((option) => (
                                                             <label
                                                                 key={option.value}
@@ -595,7 +595,7 @@ export default function WaitlistModal({ isOpen, onClose, initialUserType }: Wait
                                                 value={businessName}
                                                 onChange={(e) => setBusinessName(e.target.value)}
                                                 placeholder="e.g. Tunde Abdul"
-                                                className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent"
+                                                className="w-full px-4 py-3 border border-gray-300 rounded-[1px] text-sm focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent"
                                                 required
                                             />
                                         </div>
@@ -606,7 +606,7 @@ export default function WaitlistModal({ isOpen, onClose, initialUserType }: Wait
                                                 <button
                                                     type="button"
                                                     onClick={() => setCategoryDropdownOpen(!categoryDropdownOpen)}
-                                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm text-[#454545] hover:bg-[#FFF6F2] focus:bg-[#FFF6F2] focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent text-left flex justify-between items-center"
+                                                    className="w-full px-4 py-3 border border-gray-300 rounded-[1px] text-sm text-[#454545] hover:bg-[#FFF6F2] focus:bg-[#FFF6F2] focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent text-left flex justify-between items-center"
                                                 >
                                                     <span className={category.length === 0 ? "text-gray-400" : ""}>
                                                         {category.length === 0 ? "Select categories" : `${category.length} selected`}
@@ -616,7 +616,7 @@ export default function WaitlistModal({ isOpen, onClose, initialUserType }: Wait
                                                     </svg>
                                                 </button>
                                                 {categoryDropdownOpen && (
-                                                    <div className="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-lg shadow-lg max-h-60 overflow-y-auto">
+                                                    <div className="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-[1px] shadow-lg max-h-60 overflow-y-auto">
                                                         {categoryOptions.map((option) => (
                                                             <label
                                                                 key={option.value}
@@ -641,7 +641,7 @@ export default function WaitlistModal({ isOpen, onClose, initialUserType }: Wait
                                             <select
                                                 value={outlets}
                                                 onChange={(e) => setOutlets(e.target.value)}
-                                                className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm text-[#454545] hover:bg-[#FFF6F2] focus:bg-[#FFF6F2] focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent appearance-none bg-[url('data:image/svg+xml;charset=UTF-8,%3csvg%20width%3D%2212%22%20height%3D%228%22%20viewBox%3D%220%200%2012%208%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3cpath%20d%3D%22M1%201.5L6%206.5L11%201.5%22%20stroke%3D%22%234A4A4A%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3c%2Fsvg%3E')] bg-[length:12px_8px] bg-[position:calc(100%-16px)_center] bg-no-repeat"
+                                                className="w-full px-4 py-3 border border-gray-300 rounded-[1px] text-sm text-[#454545] hover:bg-[#FFF6F2] focus:bg-[#FFF6F2] focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent appearance-none bg-[url('data:image/svg+xml;charset=UTF-8,%3csvg%20width%3D%2212%22%20height%3D%228%22%20viewBox%3D%220%200%2012%208%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3cpath%20d%3D%22M1%201.5L6%206.5L11%201.5%22%20stroke%3D%22%234A4A4A%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3c%2Fsvg%3E')] bg-[length:12px_8px] bg-[position:calc(100%-16px)_center] bg-no-repeat"
                                             >
                                                 <option value="">Select</option>
                                                 <option value="0">0 (No shop)</option>
@@ -658,7 +658,7 @@ export default function WaitlistModal({ isOpen, onClose, initialUserType }: Wait
                                             <select
                                                 value={location}
                                                 onChange={(e) => setLocation(e.target.value)}
-                                                className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm text-[#454545] hover:bg-[#FFF6F2] focus:bg-[#FFF6F2] focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent appearance-none bg-[url('data:image/svg+xml;charset=UTF-8,%3csvg%20width%3D%2212%22%20height%3D%228%22%20viewBox%3D%220%200%2012%208%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3cpath%20d%3D%22M1%201.5L6%206.5L11%201.5%22%20stroke%3D%22%234A4A4A%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3c%2Fsvg%3E')] bg-[length:12px_8px] bg-[position:calc(100%-16px)_center] bg-no-repeat"
+                                                className="w-full px-4 py-3 border border-gray-300 rounded-[1px] text-sm text-[#454545] hover:bg-[#FFF6F2] focus:bg-[#FFF6F2] focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent appearance-none bg-[url('data:image/svg+xml;charset=UTF-8,%3csvg%20width%3D%2212%22%20height%3D%228%22%20viewBox%3D%220%200%2012%208%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3cpath%20d%3D%22M1%201.5L6%206.5L11%201.5%22%20stroke%3D%22%234A4A4A%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3c%2Fsvg%3E')] bg-[length:12px_8px] bg-[position:calc(100%-16px)_center] bg-no-repeat"
                                             >
                                                 <option value="">Select your current location</option>
                                                 <option value="outside-nigeria">Outside Nigeria</option>
@@ -710,7 +710,7 @@ export default function WaitlistModal({ isOpen, onClose, initialUserType }: Wait
                                                 value={primaryContact}
                                                 onChange={(e) => setPrimaryContact(e.target.value)}
                                                 placeholder="e.g. Tunde Abdul"
-                                                className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent"
+                                                className="w-full px-4 py-3 border border-gray-300 rounded-[1px] text-sm focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent"
                                                 required
                                             />
                                         </div>
@@ -722,7 +722,7 @@ export default function WaitlistModal({ isOpen, onClose, initialUserType }: Wait
                                                 value={email}
                                                 onChange={(e) => setEmail(e.target.value)}
                                                 placeholder="e.g. tunde@gmail.com"
-                                                className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent"
+                                                className="w-full px-4 py-3 border border-gray-300 rounded-[1px] text-sm focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent"
                                                 required
                                             />
                                         </div>
@@ -734,7 +734,7 @@ export default function WaitlistModal({ isOpen, onClose, initialUserType }: Wait
                                                 value={phone}
                                                 onChange={(e) => setPhone(e.target.value)}
                                                 placeholder="+080..."
-                                                className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent"
+                                                className="w-full px-4 py-3 border border-gray-300 rounded-[1px] text-sm focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent"
                                             />
                                         </div>
 
@@ -744,7 +744,7 @@ export default function WaitlistModal({ isOpen, onClose, initialUserType }: Wait
                                                 <button
                                                     type="button"
                                                     onClick={() => setFeatureDropdownOpen(!featureDropdownOpen)}
-                                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm text-[#454545] hover:bg-[#FFF6F2] focus:bg-[#FFF6F2] focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent text-left flex justify-between items-center"
+                                                    className="w-full px-4 py-3 border border-gray-300 rounded-[1px] text-sm text-[#454545] hover:bg-[#FFF6F2] focus:bg-[#FFF6F2] focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent text-left flex justify-between items-center"
                                                 >
                                                     <span className={excitedFeature.length === 0 ? "text-gray-400" : ""}>
                                                         {excitedFeature.length === 0 ? "Select features" : `${excitedFeature.length} selected`}
@@ -754,7 +754,7 @@ export default function WaitlistModal({ isOpen, onClose, initialUserType }: Wait
                                                     </svg>
                                                 </button>
                                                 {featureDropdownOpen && (
-                                                    <div className="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-lg shadow-lg max-h-60 overflow-y-auto">
+                                                    <div className="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-[1px] shadow-lg max-h-60 overflow-y-auto">
                                                         {distributorFeatureOptions.map((option) => (
                                                             <label
                                                                 key={option.value}
@@ -786,7 +786,7 @@ export default function WaitlistModal({ isOpen, onClose, initialUserType }: Wait
                                                 value={businessName}
                                                 onChange={(e) => setBusinessName(e.target.value)}
                                                 placeholder="e.g. Tunde Abdul"
-                                                className="w-full px-4 py-3 border text-[#fff] border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent"
+                                                className="w-full px-4 py-3 border text-[#fff] border-gray-300 rounded-[1px] text-sm focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent"
                                                 required
                                             />
                                         </div>
@@ -797,7 +797,7 @@ export default function WaitlistModal({ isOpen, onClose, initialUserType }: Wait
                                                 <button
                                                     type="button"
                                                     onClick={() => setCategoryDropdownOpen(!categoryDropdownOpen)}
-                                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm text-[#454545] hover:bg-[#FFF6F2] focus:bg-[#FFF6F2] focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent text-left flex justify-between items-center"
+                                                    className="w-full px-4 py-3 border border-gray-300 rounded-[1px] text-sm text-[#454545] hover:bg-[#FFF6F2] focus:bg-[#FFF6F2] focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent text-left flex justify-between items-center"
                                                 >
                                                     <span className={category.length === 0 ? "text-gray-400" : ""}>
                                                         {category.length === 0 ? "Select categories" : `${category.length} selected`}
@@ -807,7 +807,7 @@ export default function WaitlistModal({ isOpen, onClose, initialUserType }: Wait
                                                     </svg>
                                                 </button>
                                                 {categoryDropdownOpen && (
-                                                    <div className="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-lg shadow-lg max-h-60 overflow-y-auto">
+                                                    <div className="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-[1px] shadow-lg max-h-60 overflow-y-auto">
                                                         {categoryOptions.map((option) => (
                                                             <label
                                                                 key={option.value}
@@ -832,7 +832,7 @@ export default function WaitlistModal({ isOpen, onClose, initialUserType }: Wait
                                             <select
                                                 value={location}
                                                 onChange={(e) => setLocation(e.target.value)}
-                                                className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm text-[#454545] hover:bg-[#FFF6F2] focus:bg-[#FFF6F2] focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent appearance-none bg-[url('data:image/svg+xml;charset=UTF-8,%3csvg%20width%3D%2212%22%20height%3D%228%22%20viewBox%3D%220%200%2012%208%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3cpath%20d%3D%22M1%201.5L6%206.5L11%201.5%22%20stroke%3D%22%234A4A4A%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3c%2Fsvg%3E')] bg-[length:12px_8px] bg-[position:calc(100%-16px)_center] bg-no-repeat"
+                                                className="w-full px-4 py-3 border border-gray-300 rounded-[1px] text-sm text-[#454545] hover:bg-[#FFF6F2] focus:bg-[#FFF6F2] focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent appearance-none bg-[url('data:image/svg+xml;charset=UTF-8,%3csvg%20width%3D%2212%22%20height%3D%228%22%20viewBox%3D%220%200%2012%208%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3cpath%20d%3D%22M1%201.5L6%206.5L11%201.5%22%20stroke%3D%22%234A4A4A%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3c%2Fsvg%3E')] bg-[length:12px_8px] bg-[position:calc(100%-16px)_center] bg-no-repeat"
                                             >
                                                 <option value="">Select your current location</option>
                                                 <option value="outside-nigeria">Outside Nigeria</option>
@@ -884,7 +884,7 @@ export default function WaitlistModal({ isOpen, onClose, initialUserType }: Wait
                                                 value={primaryContact}
                                                 onChange={(e) => setPrimaryContact(e.target.value)}
                                                 placeholder="e.g. Tunde Abdul"
-                                                className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent"
+                                                className="w-full px-4 py-3 border border-gray-300 rounded-[1px] text-sm focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent"
                                                 required
                                             />
                                         </div>
@@ -896,7 +896,7 @@ export default function WaitlistModal({ isOpen, onClose, initialUserType }: Wait
                                                 value={email}
                                                 onChange={(e) => setEmail(e.target.value)}
                                                 placeholder="e.g. tunde@gmail.com"
-                                                className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent"
+                                                className="w-full px-4 py-3 border border-gray-300 rounded-[1px] text-sm focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent"
                                                 required
                                             />
                                         </div>
@@ -908,7 +908,7 @@ export default function WaitlistModal({ isOpen, onClose, initialUserType }: Wait
                                                 value={phone}
                                                 onChange={(e) => setPhone(e.target.value)}
                                                 placeholder="080..."
-                                                className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent"
+                                                className="w-full px-4 py-3 border border-gray-300 rounded-[1px] text-sm focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent"
                                             />
                                         </div>
 
@@ -918,7 +918,7 @@ export default function WaitlistModal({ isOpen, onClose, initialUserType }: Wait
                                                 <button
                                                     type="button"
                                                     onClick={() => setFeatureDropdownOpen(!featureDropdownOpen)}
-                                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm text-[#454545] hover:bg-[#FFF6F2] focus:bg-[#FFF6F2] focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent text-left flex justify-between items-center"
+                                                    className="w-full px-4 py-3 border border-gray-300 rounded-[1px] text-sm text-[#454545] hover:bg-[#FFF6F2] focus:bg-[#FFF6F2] focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent text-left flex justify-between items-center"
                                                 >
                                                     <span className={excitedFeature.length === 0 ? "text-gray-400" : ""}>
                                                         {excitedFeature.length === 0 ? "Select features" : `${excitedFeature.length} selected`}
@@ -928,7 +928,7 @@ export default function WaitlistModal({ isOpen, onClose, initialUserType }: Wait
                                                     </svg>
                                                 </button>
                                                 {featureDropdownOpen && (
-                                                    <div className="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-lg shadow-lg max-h-60 overflow-y-auto">
+                                                    <div className="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-[1px] shadow-lg max-h-60 overflow-y-auto">
                                                         {manufacturerFeatureOptions.map((option) => (
                                                             <label
                                                                 key={option.value}
@@ -1014,12 +1014,12 @@ export default function WaitlistModal({ isOpen, onClose, initialUserType }: Wait
                         {/* For Manufacturers */}
                         <div 
                             onClick={() => setSelectedWaitlist('manufacturer')}
-                            className="border border-gray-200 rounded-lg p-4 hover:border-[#FF5722] transition-colors cursor-pointer"
+                            className="border border-gray-200 rounded-[1px] p-4 hover:border-[#FF5722] transition-colors cursor-pointer"
                         >
                             <h3 className="font-semibold text-[#1C1C1C] mb-2 text-[20px]">
                                 For Manufacturers
                             </h3>
-                            <div className="aspect-video bg-gray-100 rounded-lg mb-3 overflow-hidden">
+                            <div className="aspect-video bg-gray-100 rounded-[1px] mb-3 overflow-hidden">
                                 <img
                                     src={Five.src}
                                     alt="For Manufacturers"
@@ -1038,12 +1038,12 @@ export default function WaitlistModal({ isOpen, onClose, initialUserType }: Wait
                         {/* For Distributors */}
                         <div 
                             onClick={() => setSelectedWaitlist('distributor')}
-                            className="border border-gray-200 rounded-lg p-4 hover:border-[#FF5722] transition-colors cursor-pointer"
+                            className="border border-gray-200 rounded-[1px] p-4 hover:border-[#FF5722] transition-colors cursor-pointer"
                         >
                             <h3 className="font-semibold text-[#1C1C1C] mb-2 text-[20px]">
                                 For Distributors
                             </h3>
-                            <div className="aspect-video bg-gray-100 rounded-lg mb-3 overflow-hidden">
+                            <div className="aspect-video bg-gray-100 rounded-[1px] mb-3 overflow-hidden">
                                 <img
                                     src={Six.src}
                                     alt="For Distributors"
@@ -1062,12 +1062,12 @@ export default function WaitlistModal({ isOpen, onClose, initialUserType }: Wait
                         {/* For SMEs/Retailers */}
                         <div 
                             onClick={() => setSelectedWaitlist('retailer')}
-                            className="border border-gray-200 rounded-lg p-4 hover:border-[#FF5722] transition-colors cursor-pointer"
+                            className="border border-gray-200 rounded-[1px] p-4 hover:border-[#FF5722] transition-colors cursor-pointer"
                         >
                             <h3 className="font-semibold text-[#1C1C1C] mb-2 text-[20px]">
                                 For SMEs/Retailers
                             </h3>
-                            <div className="aspect-video bg-gray-100 rounded-lg mb-3 overflow-hidden">
+                            <div className="aspect-video bg-gray-100 rounded-[1px] mb-3 overflow-hidden">
 
                                 <img
                                     src={Seven.src}
@@ -1087,12 +1087,12 @@ export default function WaitlistModal({ isOpen, onClose, initialUserType }: Wait
                         {/* For Consumers */}
                         <div 
                             onClick={() => setSelectedWaitlist('consumer')}
-                            className="border border-gray-200 rounded-lg p-4 hover:border-[#FF5722] transition-colors cursor-pointer"
+                            className="border border-gray-200 rounded-[1px] p-4 hover:border-[#FF5722] transition-colors cursor-pointer"
                         >
                             <h3 className="font-semibold text-[#1C1C1C] mb-2 text-[20px]">
                                 For Consumers
                             </h3>
-                            <div className="aspect-video bg-gray-100 rounded-lg mb-3 overflow-hidden">
+                            <div className="aspect-video bg-gray-100 rounded-[1px] mb-3 overflow-hidden">
                                 <img
                                     src={Eight.src}
                                     alt="For Consumers"
