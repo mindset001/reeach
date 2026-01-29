@@ -186,7 +186,7 @@ export default function AdminDashboard() {
               onClick={handleLogout}
               className="px-4 py-2 bg-gray-200 text-gray-700 rounded-[4px] hover:bg-gray-300 transition-colors"
             >
-              Logout
+              <p>Sign Out</p>
             </button>
           </div>
         </div>
