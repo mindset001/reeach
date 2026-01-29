@@ -141,7 +141,7 @@ export default function Navbar({ variant = "default", onJoinWaitlist }: NavbarPr
           {/* Bottom Buttons */}
           <div className="fixed bottom-0 left-0 right-0 px-6 py-8 bg-white ">
             <div className="flex gap-4">
-              <button className="bg-[#E64D0B] rounded-[24px] flex-1" onClick={() => { setIsMenuOpen(false); onJoinWaitlist?.(); }}>
+              <button className="bg-[#E64D0B] rounded-[24px] flex-1 p-2" onClick={() => { setIsMenuOpen(false); onJoinWaitlist?.(); }}>
                 <p className="font-SemiBold text-[16px]">Join waitlist</p>
               </button>
               <button className="flex-1" onClick={() => setIsMenuOpen(false)}>

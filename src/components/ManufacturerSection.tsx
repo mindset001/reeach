@@ -99,14 +99,14 @@ export default function ManufacturerSection({ onJoinWaitlist }: ManufacturerSect
                   <p className="text-[#5F6368] text-[16px]">See other unique features for manufacturers • <span className="text-[#E64D0B] cursor-pointer hover:underline" onClick={() => setIsDemoModalOpen(true)}>Request a demo / presentation</span></p>
             </div>
 
-            <div className="md:w-[70%] flex items-center justify-center rounded-[16px] min-h-[300px] p-8 overflow-hidden">
+            <div className="md:w-[70%] flex items-center justify-center rounded-[16px]  md:min-h-[300px]  overflow-hidden">
               {ADDITIONAL_MANUFACTURER_FEATURES[activeFeature].image && (
                 <Image
                   src={ADDITIONAL_MANUFACTURER_FEATURES[activeFeature].image}
                   alt={ADDITIONAL_MANUFACTURER_FEATURES[activeFeature].title}
-                  width={500}
-                  height={300}
-                  className="w-[70%] h-auto object-contain"
+                  width={400}
+                  height={400}
+                  className="w-full h-auto object-contain"
                 />
               )}
               {!ADDITIONAL_MANUFACTURER_FEATURES[activeFeature].image && (
