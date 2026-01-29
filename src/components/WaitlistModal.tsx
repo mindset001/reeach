@@ -111,7 +111,7 @@ export default function WaitlistModal({ isOpen, onClose, initialUserType }: Wait
             }
 
             // Submit to backend API
-            const response = await fetch('http://localhost:5000/api/waitlist/submit', {
+            const response = await fetch('https://reeach.onrender.com/api/waitlist/submit', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

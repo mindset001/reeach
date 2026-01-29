@@ -72,7 +72,7 @@ export default function AdminDashboard() {
       });
 
       const response = await fetch(
-        `http://localhost:5000/api/admin/waitlist?${queryParams}`,
+        `https://reeach.onrender.com/api/admin/waitlist?${queryParams}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -115,7 +115,7 @@ export default function AdminDashboard() {
     try {
       const token = localStorage.getItem("adminToken");
       const response = await fetch(
-        `http://localhost:5000/api/admin/waitlist/${id}`,
+        `https://reeach.onrender.com/api/admin/waitlist/${id}`,
         {
           method: "DELETE",
           headers: {
@@ -135,7 +135,7 @@ export default function AdminDashboard() {
   const handleExport = async () => {
     try {
       const token = localStorage.getItem("adminToken");
-      const response = await fetch("http://localhost:5000/api/admin/export", {
+      const response = await fetch("https://reeach.onrender.com/api/admin/export", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`,
