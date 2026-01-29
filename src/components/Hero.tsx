@@ -55,7 +55,7 @@ Real-time. Verified. Simple.
               <Button variant="primary" size="md" onClick={openModal}>
                 Join waitlist
               </Button>
-              <Button variant="secondary" size="md">
+              <Button variant="secondary" size="md" onClick={() => document.getElementById('ProblemSection')?.scrollIntoView({ behavior: 'smooth' })}>
                 Learn more
               </Button>
             </div>

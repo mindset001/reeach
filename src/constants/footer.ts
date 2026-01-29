@@ -26,10 +26,10 @@ export const FOOTER_COLUMNS = [
 ];
 
 export const COMPANY_RESOURCES = [
-  { label: "About Reeach", href: "#about" },
-  { label: "How Reeach works", href: "#how-it-works" },
-  { label: "Investor Relations", href: "#investors" },
-  { label: "FAQs", href: "#faqs" },
+  { label: "About Reeach", href: "#ProblemSection" },
+  { label: "How Reeach works", href: "/how-it-works" },
+  { label: "Investor Relations", href: "/investors" },
+  { label: "FAQs", href: "faqs" },
 ];
 
 export const LEGAL_LINKS = [
@@ -44,7 +44,7 @@ export const ENQUIRIES = [
 ];
 
 export const SOCIAL_LINKS = [
-  { name: "Instagram", icon: "instagram", href: "#" },
+  { name: "Instagram", icon: "instagram", href: "/https://www.instagram.com/getreeach/" },
   // { name: "Twitter", icon: "twitter", href: "#" },
-  { name: "LinkedIn", icon: "linkedin", href: "#" },
+  { name: "LinkedIn", icon: "linkedin", href: "/https://www.linkedin.com/company/getreeach/" },
 ];

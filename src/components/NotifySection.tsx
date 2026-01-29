@@ -74,12 +74,12 @@ export default function NotifySection({ onJoinWaitlist }: NotifySectionProps) {
             </div>
 
             {/* Privacy Notice */}
-            <p className="text-xs text-[#888888] text-left">
+            {/* <p className="text-xs text-[#888888] text-left">
               I understand that my personal data will be processed <br className="hidden md:block"/> in accordance with Reeach&apos;s{" "}
               <Link href="/privacy" className="text-[#E64D0B] underline">
                 Privacy Policy
               </Link>
-            </p>
+            </p> */}
 
             {/* Submit Button */}
            <div className="flex justify-end">

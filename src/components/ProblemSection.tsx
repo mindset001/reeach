@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function ProblemSection() {
   return (
-    <section className="py-10 bg-[#fff]">
+    <section id="ProblemSection" className="py-10 bg-[#fff]">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left - Image */}

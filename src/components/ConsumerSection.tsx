@@ -74,7 +74,7 @@ export default function ConsumerSection({ onJoinWaitlist }: ConsumerSectionProps
            <div className="flex flex-col justify-start items-start mt-10">
             <div className="text-left mb-6">
             <p className="text-[#5F6368] text-[14px]">
-              There are more than 18 unique features for retailers.
+              There are more than 15 unique features for consumers.
             </p>
           </div>
 

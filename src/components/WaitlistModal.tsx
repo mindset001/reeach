@@ -273,7 +273,7 @@ export default function WaitlistModal({ isOpen, onClose, initialUserType }: Wait
                                                 type="tel"
                                                 value={phone}
                                                 onChange={(e) => setPhone(e.target.value)}
-                                                placeholder="+080..."
+                                                placeholder="080..."
                                                 className="w-full px-4 py-3 border border-gray-300 rounded-[1px] text-sm focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent"
                                             />
                                         </div>
@@ -542,7 +542,7 @@ export default function WaitlistModal({ isOpen, onClose, initialUserType }: Wait
                                                 type="tel"
                                                 value={phone}
                                                 onChange={(e) => setPhone(e.target.value)}
-                                                placeholder="+080..."
+                                                placeholder="080..."
                                                 className="w-full px-4 py-3 border border-gray-300 rounded-[1px] text-sm focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent"
                                             />
                                         </div>
@@ -733,7 +733,7 @@ export default function WaitlistModal({ isOpen, onClose, initialUserType }: Wait
                                                 type="tel"
                                                 value={phone}
                                                 onChange={(e) => setPhone(e.target.value)}
-                                                placeholder="+080..."
+                                                placeholder="080..."
                                                 className="w-full px-4 py-3 border border-gray-300 rounded-[1px] text-sm focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:border-transparent"
                                             />
                                         </div>
