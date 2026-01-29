@@ -36,6 +36,11 @@ export default function WaitlistModal({ isOpen, onClose, initialUserType }: Wait
     // Dropdown states
     const [categoryDropdownOpen, setCategoryDropdownOpen] = useState(false);
     const [featureDropdownOpen, setFeatureDropdownOpen] = useState(false);
+    
+    // Submission states
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitSuccess, setSubmitSuccess] = useState(false);
+    const [submitError, setSubmitError] = useState("");
 
     useEffect(() => {
         if (isOpen) {
@@ -74,23 +79,66 @@ export default function WaitlistModal({ isOpen, onClose, initialUserType }: Wait
         onClose();
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        // Handle form submission
-        console.log({ 
-            waitlistType: selectedWaitlist,
-            fullName, 
-            businessName,
-            email, 
-            phone,
-            category,
-            location,
-            outlets,
-            primaryContact,
-            excitedFeature
-        });
-        // Close modal after submission
-        handleClose();
+        setIsSubmitting(true);
+        setSubmitError("");
+        
+        try {
+            // Prepare submission data based on user type
+            const submissionData: any = {
+                userType: selectedWaitlist,
+                email,
+                phone: phone || undefined,
+                location: location || undefined,
+            };
+
+            // Add type-specific fields
+            if (selectedWaitlist === 'consumer') {
+                submissionData.fullName = fullName;
+                submissionData.excitedFeatures = excitedFeature;
+            } else {
+                // Business types (retailer, distributor, manufacturer)
+                submissionData.businessName = businessName;
+                submissionData.category = category;
+                submissionData.outlets = outlets || undefined;
+                
+                if (selectedWaitlist === 'distributor' || selectedWaitlist === 'manufacturer') {
+                    submissionData.primaryContact = primaryContact;
+                }
+                
+                submissionData.excitedFeatures = excitedFeature;
+            }
+
+            // Submit to backend API
+            const response = await fetch('http://localhost:5000/api/waitlist/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(submissionData),
+            });
+
+            const data = await response.json();
+
+            if (!response.ok) {
+                throw new Error(data.message || 'Failed to join waitlist');
+            }
+
+            // Show success state
+            setSubmitSuccess(true);
+            
+            // Reset form after 2 seconds and close modal
+            setTimeout(() => {
+                handleClose();
+                setSubmitSuccess(false);
+            }, 2000);
+
+        } catch (error: any) {
+            setSubmitError(error.message || 'An error occurred. Please try again.');
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     const toggleCategory = (value: string) => {
@@ -238,6 +286,21 @@ export default function WaitlistModal({ isOpen, onClose, initialUserType }: Wait
                             </button>
 
                             <h2 className="text-xl font-semibold text-[#1C1C1C] mb-6">{getTitle()}</h2>
+
+                            {/* Success Message */}
+                            {submitSuccess && (
+                                <div className="mb-4 p-4 bg-green-50 border border-green-200 rounded-[1px]">
+                                    <p className="text-green-700 font-medium">✓ Successfully joined the waitlist!</p>
+                                    <p className="text-green-600 text-sm mt-1">We'll notify you when we launch.</p>
+                                </div>
+                            )}
+
+                            {/* Error Message */}
+                            {submitError && (
+                                <div className="mb-4 p-4 bg-red-50 border border-red-200 rounded-[1px]">
+                                    <p className="text-red-700 font-medium">✗ {submitError}</p>
+                                </div>
+                            )}
 
                             <form onSubmit={handleSubmit} className="space-y-4">{/* Consumer Form */}
                                 {/* Consumer Form */}
@@ -952,9 +1015,14 @@ export default function WaitlistModal({ isOpen, onClose, initialUserType }: Wait
 
                                 <button
                                     type="submit"
-                                    className="w-full py-3 bg-[#E64D0B] text-white font-semibold rounded-[4px] hover:bg-[#E64A19] transition-colors mt-6"
+                                    disabled={isSubmitting || submitSuccess}
+                                    className={`w-full py-3 text-white font-semibold rounded-[4px] transition-colors mt-6 ${
+                                        isSubmitting || submitSuccess
+                                            ? 'bg-gray-400 cursor-not-allowed'
+                                            : 'bg-[#E64D0B] hover:bg-[#E64A19]'
+                                    }`}
                                 >
-                                    Get early access
+                                    {isSubmitting ? 'Submitting...' : submitSuccess ? 'Success!' : 'Get early access'}
                                 </button>
                             </form>
                         </div>
