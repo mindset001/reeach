@@ -38,12 +38,14 @@ export default function Hero() {
             <h1 className="text-[32px] md:text-[32px] lg:text-[44px] font-bold text-white leading-tight">
               Every product.
               <br />
-              Every store.
+            service, store,
               <br />
-              Every transaction.
+            transaction.
               <br />
               Connected.
+              <br />In real time.
             </h1>
+
 
             <p className="text-[14px] md:text-[14px] text-white/90 max-w-sm leading-relaxed">
              The AI-powered platform that connects how 
